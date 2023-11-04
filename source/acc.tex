@@ -1,4 +1,5 @@
-\documentclass[paper=5.5in:8.5in,BCOR=15mm,twoside,DIV=15,headinclude=off,12pt,chapterprefix=off,openany,headings=huge]{scrbook} % Document font size and paper size
+\documentclass[paper=5.5in:8.5in,BCOR=10mm,twoside,DIV=15,12pt,usegeometry,openany]{scrbook} % Document font size and paper size
+%\documentclass[paper=a5,BCOR=15mm,twoside,DIV=15,headinclude=off,12pt,chapterprefix=off,openany,headings=huge]{scrbook} % Document font size and paper size
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{fontspec}
@@ -12,6 +13,9 @@
 \usepackage{csquotes}
 \usepackage[export]{adjustbox}
 \usepackage[ukenglish]{babel}
+
+%\usepackage{showframe}
+
 %\usepackage{subfig}
 \newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
 \newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
@@ -24,6 +28,9 @@
 \renewcommand{\LettrineFontHook}{\fontspec{acorninitials.TTF}}
 %\renewcommand{\LettrineFontHook}{\color[red]{0.85}}
 
+\headsep=10pt
+\headheight=45pt
+\footskip=30pt
 
 \usepackage{ebgaramond} 
 %\usepackage{stix} % Alternative Stix font
@@ -33,6 +40,10 @@
 
 \setkomafont{chapter}{\chapterfont\Huge\bfseries}
 \addtokomafont{disposition}{\normalfont}
+\automark{chapter}
+\lehead{A Christmas Carol}
+\rohead{\leftmark}
+
 
 \setlist [itemize] {noitemsep} 
 
@@ -115,7 +126,7 @@ Mind! I don't mean to say that I know of my own knowledge, what there is particu
 
 Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don't know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, and sole mourner. And even Scrooge was not so dreadfully cut up by the sad event but that he was an excellent man of business on the very day of the funeral, and solemnised it with an undoubted bargain.
 
-The mention of Marley's funeral brings me back to the point I started from. There is no doubt that Marley was dead. This must be distinctly understood, or nothing wonderful can come of the story I am going to relate. If we were not perfectly convinced that Hamlet's father died before the play began, there would be nothing more remarkable in his taking a stroll at night, in an easterly wind, upon his own ramparts, than there would be in any other middle-aged gentleman rashly turning out after dark in a breezy spot—say St. Paul's Churchyard, for instance—literally to astonish his son's weak mind.
+The mention of Marley's funeral brings me back to the point I started from. There is no doubt that Marley was dead. This must be distinctly understood, or nothing wonderful can come of the story I am going to relate. If we were not perfectly convinced that Hamlet's father died before the play began, there would be nothing more remarkable in his taking a stroll at night, in an easterly wind, upon his own ramparts, than there would be in any other middle-aged gentleman rashly turning out after dark in a breezy spot\textemdash say St. Paul's Churchyard, for instance\textemdash literally to astonish his son's weak mind.
 
 Scrooge never painted out Old Marley's name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.
 
@@ -127,7 +138,7 @@ Nobody ever stopped him in the street to say, with gladsome looks, \enquote{My d
 
 But what did Scrooge care? It was the very thing he liked. To edge his way along the crowded paths of life, warning all human sympathy to keep its distance, was what the knowing ones call \enquote{nuts} to Scrooge.
 
-Once upon a time—of all the good days in the year, on Christmas Eve—old Scrooge sat busy in his counting-house. It was cold, bleak, biting weather; foggy withal; and he could hear the people in the court outside go wheezing up and down, beating their hands upon their breasts, and stamping their feet upon the pavement stones to warm them. The City clocks had only just gone three, but it was quite dark already—it had not been light all day—and candles were flaring in the windows of the neighbouring offices, like ruddy smears upon the palpable brown air. The fog came pouring in at every chink and keyhole, and was so dense without, that, although the court was of the narrowest, the houses opposite were mere phantoms. To see the dingy cloud come drooping down, obscuring everything, one might have thought that nature lived hard by, and was brewing on a large scale.
+Once upon a time\textemdash of all the good days in the year, on Christmas Eve\textemdash old Scrooge sat busy in his counting-house. It was cold, bleak, biting weather; foggy withal; and he could hear the people in the court outside go wheezing up and down, beating their hands upon their breasts, and stamping their feet upon the pavement stones to warm them. The City clocks had only just gone three, but it was quite dark already\textemdash it had not been light all day\textemdash and candles were flaring in the windows of the neighbouring offices, like ruddy smears upon the palpable brown air. The fog came pouring in at every chink and keyhole, and was so dense without, that, although the court was of the narrowest, the houses opposite were mere phantoms. To see the dingy cloud come drooping down, obscuring everything, one might have thought that nature lived hard by, and was brewing on a large scale.
 
 The door of Scrooge's counting-house was open, that he might keep his eye upon his clerk, who in a dismal little cell beyond, a sort of tank, was copying letters. Scrooge had a very small fire, but the clerk's fire was so very much smaller that it looked like one coal. But he couldn't replenish it, for Scrooge kept the coal-box in his own room; and so surely as the clerk came in with the shovel, the master predicted that it would be necessary for them to part. Wherefore the clerk put on his white comforter, and tried to warm himself at the candle; in which effort, not being a man of strong imagination, he failed.
 
@@ -157,7 +168,7 @@ Scrooge, having no better answer ready on the spur of the moment, said, \enquote
 
 \enquote{Let me leave it alone, then,} said Scrooge. \enquote{Much good may it do you! Much good it has ever done you!}
 
-\enquote{There are many things from which I might have derived good, by which I have not profited, I dare say,} returned the nephew; \enquote{Christmas among the rest. But I am sure I have always thought of Christmas-time, when it has come round—apart from the veneration due to its sacred name and origin, if anything belonging to it can be apart from that—as a good time; a kind, forgiving, charitable, pleasant time; the only time I know of, in the long calendar of the year, when men and women seem by one consent to open their shut-up hearts freely, and to think of people below them as if they really were fellow-passengers to the grave, and not another race of creatures bound on other journeys. And therefore, uncle, though it has never put a scrap of gold or silver in my pocket, I believe that it \textit{has} done me good and \textit{will} do me good; and I say, God bless it!}
+\enquote{There are many things from which I might have derived good, by which I have not profited, I dare say,} returned the nephew; \enquote{Christmas among the rest. But I am sure I have always thought of Christmas-time, when it has come round\textemdash apart from the veneration due to its sacred name and origin, if anything belonging to it can be apart from that\textemdash as a good time; a kind, forgiving, charitable, pleasant time; the only time I know of, in the long calendar of the year, when men and women seem by one consent to open their shut-up hearts freely, and to think of people below them as if they really were fellow-passengers to the grave, and not another race of creatures bound on other journeys. And therefore, uncle, though it has never put a scrap of gold or silver in my pocket, I believe that it \textit{has} done me good and \textit{will} do me good; and I say, God bless it!}
 
 The clerk in the tank involuntarily applauded. Becoming immediately sensible of the impropriety, he poked the fire, and extinguished the last frail spark for ever.
 
@@ -165,7 +176,7 @@ The clerk in the tank involuntarily applauded. Becoming immediately sensible of 
 
 \enquote{Don't be angry, uncle. Come! Dine with us to-morrow.}
 
-Scrooge said that he would see him——Yes, indeed he did. He went the whole length of the expression, and said that he would see him in that extremity first.
+Scrooge said that he would see him\textemdash \textemdash Yes, indeed he did. He went the whole length of the expression, and said that he would see him in that extremity first.
 
 \enquote{But why?} cried Scrooge's nephew. \enquote{Why?}
 
@@ -207,7 +218,7 @@ It certainly was; for they had been two kindred spirits. At the ominous word \en
 
 \enquote{At this festive season of the year, Mr Scrooge,} said the gentleman, taking up a pen, \enquote{it is more than usually desirable that we should make some slight provision for the poor and destitute, who suffer greatly at the present time. Many thousands are in want of common necessaries; hundreds of thousands are in want of common comforts, sir.}
 
-\begin{figure}
+\begin{figure}[tbh]
 \centering
   \includegraphics[width=\linewidth]{gs025}
   \caption*{They were portly gentlemen, pleasant to behold}
@@ -233,11 +244,11 @@ It certainly was; for they had been two kindred spirits. At the ominous word \en
 
 \enquote{You wish to be anonymous?}
 
-\enquote{I wish to be left alone,} said Scrooge. \enquote{Since you ask me what I wish, gentlemen, that is my answer. I don't make merry myself at Christmas, and I can't afford to make idle people merry. I help to support the establishments I have mentioned—they cost enough: and those who are badly off must go there.}
+\enquote{I wish to be left alone,} said Scrooge. \enquote{Since you ask me what I wish, gentlemen, that is my answer. I don't make merry myself at Christmas, and I can't afford to make idle people merry. I help to support the establishments I have mentioned\textemdash they cost enough: and those who are badly off must go there.}
 
 \enquote{Many can't go there; and many would rather die.}
 
-\enquote{If they would rather die,} said Scrooge, \enquote{they had better do it, and decrease the surplus population. Besides—excuse me—I don't know that.}
+\enquote{If they would rather die,} said Scrooge, \enquote{they had better do it, and decrease the surplus population. Besides\textemdash excuse me\textemdash I don't know that.}
 
 \enquote{But you might know it,} observed the gentleman.
 
@@ -280,7 +291,7 @@ The clerk promised that he would; and Scrooge walked out with a growl. The offic
 
 Scrooge took his melancholy dinner in his usual melancholy tavern; and having read all the newspapers, and beguiled the rest of the evening with his banker's book, went home to bed. He lived in chambers which had once belonged to his deceased partner. They were a gloomy suite of rooms, in a lowering pile of building up a yard, where it had so little business to be, that one could scarcely help fancying it must have run there when it was a young house, playing at hide-and-seek with other houses, and have forgotten the way out again. It was old enough now, and dreary enough; for nobody lived in it but Scrooge, the other rooms being all let out as offices. The yard was so dark that even Scrooge, who knew its every stone, was fain to grope with his hands. The fog and frost so hung about the black old gateway of the house, that it seemed as if the Genius of the Weather sat in mournful meditation on the threshold.
 
-Now, it is a fact that there was nothing at all particular about the knocker on the door, except that it was very large. It is also a fact that Scrooge had seen it, night and morning, during his whole residence in that place; also that Scrooge had as little of what is called fancy about him as any man in the City of London, even including—which is a bold word—the corporation, aldermen, and livery. Let it also be borne in mind that Scrooge had not bestowed one thought on Marley since his last mention of his seven-years'-dead partner that afternoon. And then let any man explain to me, if he can, how it happened that Scrooge, having his key in the lock of the door, saw in the knocker, without its undergoing any intermediate process of change—not a knocker, but Marley's face.
+Now, it is a fact that there was nothing at all particular about the knocker on the door, except that it was very large. It is also a fact that Scrooge had seen it, night and morning, during his whole residence in that place; also that Scrooge had as little of what is called fancy about him as any man in the City of London, even including\textemdash which is a bold word\textemdash the corporation, aldermen, and livery. Let it also be borne in mind that Scrooge had not bestowed one thought on Marley since his last mention of his seven-years'-dead partner that afternoon. And then let any man explain to me, if he can, how it happened that Scrooge, having his key in the lock of the door, saw in the knocker, without its undergoing any intermediate process of change\textemdash not a knocker, but Marley's face.
 
 Marley's face. It was not in impenetrable shadow, as the other objects in the yard were, but had a dismal light about it, like a bad lobster in a dark cellar. It was not angry or ferocious, but looked at Scrooge as Marley used to look; with ghostly spectacles turned up on its ghostly forehead. The hair was curiously stirred, as if by breath or hot air; and, though the eyes were wide open, they were perfectly motionless. That, and its livid colour, made it horrible; but its horror seemed to be in spite of the face, and beyond its control, rather than a part of its own expression.
 
@@ -337,7 +348,7 @@ No, nor did he believe it even now. Though he looked the phantom through and thr
 
 \enquote{How now!} said Scrooge, caustic and cold as ever. \enquote{What do you want with me?}
 
-\enquote{Much!}—Marley's voice; no doubt about it.
+\enquote{Much!}\textemdash Marley's voice; no doubt about it.
 
 \enquote{Who are you?}
 
@@ -347,7 +358,7 @@ No, nor did he believe it even now. Though he looked the phantom through and thr
 
 \enquote{In life I was your partner, Jacob Marley.}
 
-\enquote{Can you—can you sit down?} asked Scrooge, looking doubtfully at him.
+\enquote{Can you\textemdash can you sit down?} asked Scrooge, looking doubtfully at him.
 
 \enquote{I can.}
 
@@ -391,7 +402,7 @@ Scrooge fell upon his knees, and clasped his hands before his face.
 
 \enquote{I do,} said Scrooge; \enquote{I must. But why do spirits walk the earth, and why do they come to me?}
 
-\enquote{It is required of every man,} the Ghost returned, \enquote{that the spirit within him should walk abroad among his fellow-men, and travel far and wide; and, if that spirit goes not forth in life, it is condemned to do so after death. It is doomed to wander through the world—oh, woe is me!—and witness what it cannot share, but might have shared on earth, and turned to happiness!}
+\enquote{It is required of every man,} the Ghost returned, \enquote{that the spirit within him should walk abroad among his fellow-men, and travel far and wide; and, if that spirit goes not forth in life, it is condemned to do so after death. It is doomed to wander through the world\textemdash oh, woe is me!\textemdash and witness what it cannot share, but might have shared on earth, and turned to happiness!}
 
 Again the spectre raised a cry, and shook its chain and wrung its shadowy hands.
 
@@ -405,9 +416,25 @@ Scrooge trembled more and more.
 
 Scrooge glanced about him on the floor, in the expectation of finding himself surrounded by some fifty or sixty fathoms of iron cable; but he could see nothing.
 
+\cleardoubleevenemptypage
+\begin{center} 
+\vfill
+    \includegraphics[width=\columnwidth]{gs045}
+    \vfill
+    \captionof*{figure}{On the wings of the wind}
+\end{center}
+\newpage
+
 \enquote{Jacob!} he said imploringly. \enquote{Old Jacob Marley, tell me more! Speak comfort to me, Jacob!}
 
-\enquote{I have none to give,} the Ghost replied. \enquote{It comes from other regions, Ebenezer Scrooge, and is conveyed by other ministers, to other kinds of men. Nor can I tell you what I would. A very little more is all permitted to me. I cannot rest, I cannot stay, I cannot linger anywhere. My spirit never walked beyond our counting-house—mark me;—in life my spirit never roved beyond the narrow limits of our money-changing hole; and weary journeys lie before me!}
+\enquote{I have none to give,} the Ghost replied. \enquote{It comes from other regions, Ebenezer Scrooge, and is conveyed by other ministers, to other kinds of men. Nor can I tell you what I would. A very little more is all permitted to me. I cannot rest, I cannot stay, I cannot linger anywhere. My spirit never walked beyond our counting-house\textemdash mark me;\textemdash in life my spirit never roved beyond the narrow limits of our money-changing hole; and weary journeys lie before me!}
+
+\enquote{On the wings of the wind,} replied the Ghost. 
+ \begin{center}
+     \vfill%push the image down
+     \includegraphics[width=\columnwidth]{gs045b}
+ \end{center}
+\clearpage
 
 It was a habit with Scrooge, whenever he became thoughtful, to put his hands in his breeches pockets. Pondering on what the Ghost had said, he did so now, but without lifting up his eyes, or getting off his knees.
 
@@ -421,11 +448,12 @@ It was a habit with Scrooge, whenever he became thoughtful, to put his hands in 
 
 \enquote{You travel fast?} said Scrooge.
 
-\enquote{On the wings of the wind,} replied the Ghost. 
+
 
 \enquote{You might have got over a great quantity of ground in seven years,} said Scrooge.
 
 The Ghost, on hearing this, set up another cry, and clanked its chain so hideously in the dead silence of the night, that the Ward would have been justified in indicting it for a nuisance.
+
 
 \enquote{Oh! captive, bound, and double-ironed,} cried the phantom, \enquote{not to know that ages of incessant labour, by immortal creatures, for this earth must pass into eternity before the good of which it is susceptible is all developed! Not to know that any Christian spirit working kindly in its little sphere, whatever it may be, will find its mortal life too short for its vast means of usefulness! Not to know that no space of regret can make amends for one life's opportunities misused! Yet such was I! Oh, such was I!}
 
@@ -440,14 +468,7 @@ Scrooge was very much dismayed to hear the spectre going on at this rate, and be
 
 \enquote{Hear me!} cried the Ghost. \enquote{My time is nearly gone.}
 
-\cleardoubleevenemptypage
-\begin{center} 
-\vfill
-    \includegraphics[width=\columnwidth]{gs045}
-    \vfill
-    \captionof*{figure}{On the wings of the wind}
-\end{center}
-\newpage
+
 
 \enquote{I will,} said Scrooge. \enquote{But don't be hard upon me! Don't be flowery, Jacob! Pray!}
 
@@ -462,11 +483,6 @@ It was not an agreeable idea. Scrooge shivered, and wiped the perspiration from 
 \enquote{You will be haunted,} resumed the Ghost, \enquote{by Three Spirits.}
 
 
- \begin{center}
-     \vfill%push the image down
-     \includegraphics[width=\columnwidth]{gs045b}
- \end{center}
-\clearpage
 
 
 Scrooge's countenance fell almost as low as the Ghost's had done.
@@ -475,7 +491,7 @@ Scrooge's countenance fell almost as low as the Ghost's had done.
 
 \enquote{It is.}
 
-\enquote{I—I think I'd rather not,} said Scrooge.
+\enquote{I\textemdash I think I'd rather not,} said Scrooge.
 
 \enquote{Without their visits,} said the Ghost, \enquote{you cannot hope to shun the path I tread. Expect the first to-morrow when the bell tolls One.}
 
@@ -553,7 +569,7 @@ He spoke before the hour bell sounded, which it now did with a deep, dull, hollo
 
 The curtains of his bed were drawn aside, I tell you, by a hand. Not the curtains at his feet, nor the curtains at his back, but those to which his face was addressed. The curtains of his bed were drawn aside; and Scrooge, starting up into a half-recumbent attitude, found himself face to face with the unearthly visitor who drew them: as close to it as I am now to you, and I am standing in the spirit at your elbow.
 
-It was a strange figure—like a child; yet not so like a child as like an old man, viewed through some supernatural medium, which gave him the appearance of having receded from the view, and being diminished to a child's proportions. Its hair, which hung about its neck and down its back, was white, as if with age; and yet the face had not a wrinkle in it, and the tenderest bloom was on the skin. The arms were very long and muscular; the hands the same, as if its hold were of uncommon strength. Its legs and feet, most delicately formed, were, like those upper members, bare. It wore a tunic of the purest white; and round its waist was bound a lustrous belt, the sheen of which was beautiful. It held a branch of fresh green holly in its hand; and, in singular contradiction of that wintry emblem, had its dress trimmed with summer flowers. But the strangest thing about it was, that from the crown of its head there sprang a bright clear jet of light, by which all this was visible; and which was doubtless the occasion of its using, in its duller moments, a great extinguisher for a cap, which it now held under its arm.
+It was a strange figure\textemdash like a child; yet not so like a child as like an old man, viewed through some supernatural medium, which gave him the appearance of having receded from the view, and being diminished to a child's proportions. Its hair, which hung about its neck and down its back, was white, as if with age; and yet the face had not a wrinkle in it, and the tenderest bloom was on the skin. The arms were very long and muscular; the hands the same, as if its hold were of uncommon strength. Its legs and feet, most delicately formed, were, like those upper members, bare. It wore a tunic of the purest white; and round its waist was bound a lustrous belt, the sheen of which was beautiful. It held a branch of fresh green holly in its hand; and, in singular contradiction of that wintry emblem, had its dress trimmed with summer flowers. But the strangest thing about it was, that from the crown of its head there sprang a bright clear jet of light, by which all this was visible; and which was doubtless the occasion of its using, in its duller moments, a great extinguisher for a cap, which it now held under its arm.
 
 Even this, though, when Scrooge looked at it with increasing steadiness, was \textit{not} its strangest quality. For, as its belt sparkled and glittered, now in one part and now in another, and what was light one instant at another time was dark, so the figure itself fluctuated in its distinctness; being now a thing with one arm, now with one leg, now with twenty legs, now a pair of legs without a head, now a head without a body: of which dissolving parts no outline would be visible in the dense gloom wherein they melted away. And, in the very wonder of this, it would be itself again; distinct and clear as ever.
 
@@ -579,7 +595,7 @@ Scrooge reverently disclaimed all intention to offend or any knowledge of having
 
 \enquote{Your welfare!} said the Ghost.
 
-Scrooge expressed himself much obliged, but could not help thinking that a night of unbroken rest would have been more conducive to that end. The Spirit must have heard him thinking, for it said immediately—
+Scrooge expressed himself much obliged, but could not help thinking that a night of unbroken rest would have been more conducive to that end. The Spirit must have heard him thinking, for it said immediately\textemdash 
 
 \enquote{Your reclamation, then. Take heed!}
 
@@ -686,11 +702,11 @@ The Ghost stopped at a certain warehouse door, and asked Scrooge if he knew it.
 
 \enquote{Know it!} said Scrooge. \enquote{Was I apprenticed here?}
 
-They went in. At sight of an old gentleman in a Welsh wig, sitting behind such a high desk, that if he had been two inches taller, he must have knocked his head against the ceiling, Scrooge cried in great excitement—
+They went in. At sight of an old gentleman in a Welsh wig, sitting behind such a high desk, that if he had been two inches taller, he must have knocked his head against the ceiling, Scrooge cried in great excitement\textemdash 
 
 \enquote{Why, it's old Fezziwig! Bless his heart, it's Fezziwig alive again!}
 
-Old Fezziwig laid down his pen, and looked up at the clock, which pointed to the hour of seven. He rubbed his hands; adjusted his capacious waistcoat; laughed all over himself, from his shoes to his organ of benevolence; and called out, in a comfortable, oily, rich, fat, jovial voice—
+Old Fezziwig laid down his pen, and looked up at the clock, which pointed to the hour of seven. He rubbed his hands; adjusted his capacious waistcoat; laughed all over himself, from his shoes to his organ of benevolence; and called out, in a comfortable, oily, rich, fat, jovial voice\textemdash 
 
 \enquote{Yo ho, there! Ebenezer! Dick!}
 
@@ -700,7 +716,7 @@ Scrooge's former self, now grown a young man, came briskly in, accompanied by hi
 
 \enquote{Yo ho, my boys!} said Fezziwig. \enquote{No more work to-night. Christmas Eve, Dick. Christmas, Ebenezer! Let's have the shutters up,} cried old Fezziwig, with a sharp clap of his hands, \enquote{before a man can say Jack Robinson!}
 
-You wouldn't believe how those two fellows went at it! They charged into the street with the shutters—one, two, three—had `em up in their places—four, five, six—barred `em and pinned `em—seven, eight, nine—and came back before you could have got to twelve, panting like racehorses.
+You wouldn't believe how those two fellows went at it! They charged into the street with the shutters\textemdash one, two, three\textemdash had `em up in their places\textemdash four, five, six\textemdash barred `em and pinned `em\textemdash seven, eight, nine\textemdash and came back before you could have got to twelve, panting like racehorses.
 
 \enquote{Hilli-ho!} cried old Fezziwig, skipping down from the high desk with wonderful agility. \enquote{Clear away, my lads, and let's have lots of room here! Hilli-ho, Dick! Chirrup, Ebenezer!}
 
@@ -717,7 +733,7 @@ In came a fiddler with a music-book, and went up to the lofty desk, and made an 
 
 There were more dances, and there were forfeits, and more dances, and there was cake, and there was negus, and there was a great piece of Cold Roast, and there was a great piece of Cold Boiled, and there were mince-pies, and plenty of beer. But the great effect of the evening came after the Roast and Boiled, when the fiddler (an artful dog, mind! The sort of man who knew his business better than you or I could have told it him!) struck up \enquote{Sir Roger de Coverley.} Then old Fezziwig stood out to dance with Mrs Fezziwig. Top couple, too; with a good stiff piece of work cut out for them; three or four and twenty pair of partners; people who were not to be trifled with; people who would dance, and had no notion of walking.
 
-But if they had been twice as many—ah! four times—old Fezziwig would have been a match for them, and so would Mrs Fezziwig. As to \textit{her}, she was worthy to be his partner in every sense of the term. If that's not high praise, tell me higher, and I'll use it. A positive light appeared to issue from Fezziwig's calves. They shone in every part of the dance like moons. You couldn't have predicted, at any given time, what would become of them next. And when old Fezziwig and Mrs Fezziwig had gone all through the dance; advance and retire, both hands to your partner, bow and curtsy, cork-screw, thread-the-needle, and back again to your place: Fezziwig \enquote{cut}—cut so deftly, that he appeared to wink with his legs, and came upon his feet again without a stagger.
+But if they had been twice as many\textemdash ah! four times\textemdash old Fezziwig would have been a match for them, and so would Mrs Fezziwig. As to \textit{her}, she was worthy to be his partner in every sense of the term. If that's not high praise, tell me higher, and I'll use it. A positive light appeared to issue from Fezziwig's calves. They shone in every part of the dance like moons. You couldn't have predicted, at any given time, what would become of them next. And when old Fezziwig and Mrs Fezziwig had gone all through the dance; advance and retire, both hands to your partner, bow and curtsy, cork-screw, thread-the-needle, and back again to your place: Fezziwig \enquote{cut}\textemdash cut so deftly, that he appeared to wink with his legs, and came upon his feet again without a stagger.
 
 When the clock struck eleven, this domestic ball broke up. Mr and Mrs Fezziwig took their stations, one on either side the door, and, shaking hands with every person individually as he or she went out, wished him or her a Merry Christmas. When everybody had retired but the two `prentices, they did the same to them; and thus the cheerful voices died away, and the lads were left to their beds; which were under a counter in the back-shop.
 
@@ -783,9 +799,9 @@ She shook her head.
 
 He seemed to yield to the justice of this supposition in spite of himself. But he said, with a struggle, \enquote{You think not.}
 
-\enquote{I would gladly think otherwise if I could,} she answered. \enquote{Heaven knows! When \textit{I} have learned a Truth like this, I know how strong and irresistible it must be. But if you were free to-day, to-morrow, yesterday, can even I believe that you would choose a dowerless girl—you who, in your very confidence with her, weigh everything by Gain: or, choosing her, if for a moment you were false enough to your one guiding principle to do so, do I not know that your repentance and regret would surely follow? I do; and I release you. With a full heart, for the love of him you once were.}
+\enquote{I would gladly think otherwise if I could,} she answered. \enquote{Heaven knows! When \textit{I} have learned a Truth like this, I know how strong and irresistible it must be. But if you were free to-day, to-morrow, yesterday, can even I believe that you would choose a dowerless girl\textemdash you who, in your very confidence with her, weigh everything by Gain: or, choosing her, if for a moment you were false enough to your one guiding principle to do so, do I not know that your repentance and regret would surely follow? I do; and I release you. With a full heart, for the love of him you once were.}
 
-\begin{figure}
+\begin{figure}[tbh]
 \begin{minipage}[c]{\linewidth}
 \includegraphics[width=\linewidth]{gs081}
 \caption*{She left him, and they parted}
@@ -794,7 +810,7 @@ He seemed to yield to the justice of this supposition in spite of himself. But h
 
 He was about to speak; but, with her head turned from him, she resumed:
 
-\enquote{You may—the memory of what is past half makes me hope you will—have pain in this. A very, very brief time, and you will dismiss the recollection of it gladly, as an unprofitable dream, from which it happened well that you awoke. May you be happy in the life you have chosen!}
+\enquote{You may\textemdash the memory of what is past half makes me hope you will\textemdash have pain in this. A very, very brief time, and you will dismiss the recollection of it gladly, as an unprofitable dream, from which it happened well that you awoke. May you be happy in the life you have chosen!}
 
 She left him, and they parted.
 
@@ -868,7 +884,7 @@ He was conscious of being exhausted, and overcome by an irresistible drowsiness;
 
 Gentlemen of the free-and-easy sort, who plume themselves on being acquainted with a move or two, and being usually equal to the time of day, express the wide range of their capacity for adventure by observing that they are good for anything from pitch-and-toss to manslaughter; between which opposite extremes, no doubt, there lies a tolerably wide and comprehensive range of subjects. Without venturing for Scrooge quite as hardily as this, I don't mind calling on you to believe that he was ready for a good broad field of strange appearances, and that nothing between a baby and a rhinoceros would have astonished him very much.
 
-Now, being prepared for almost anything, he was not by any means prepared for nothing; and consequently, when the bell struck One, and no shape appeared, he was taken with a violent fit of trembling. Five minutes, ten minutes, a quarter of an hour went by, yet nothing came. All this time he lay upon his bed, the very core and centre of a blaze of ruddy light, which streamed upon it when the clock proclaimed the hour; and which, being only light, was more alarming than a dozen ghosts, as he was powerless to make out what it meant, or would be at; and was sometimes apprehensive that he might be at that very moment an interesting case of spontaneous combustion, without having the consolation of knowing it. At last, however, he began to think—as you or I would have thought at first; for it is always the person not in the predicament who knows what ought to have been done in it, and would unquestionably have done it too—at last, I say, he began to think that the source and secret of this ghostly light might be in the adjoining room, from whence, on further tracing it, it seemed to shine. This idea taking full possession of his mind, he got up softly, and shuffled in his slippers to the door.
+Now, being prepared for almost anything, he was not by any means prepared for nothing; and consequently, when the bell struck One, and no shape appeared, he was taken with a violent fit of trembling. Five minutes, ten minutes, a quarter of an hour went by, yet nothing came. All this time he lay upon his bed, the very core and centre of a blaze of ruddy light, which streamed upon it when the clock proclaimed the hour; and which, being only light, was more alarming than a dozen ghosts, as he was powerless to make out what it meant, or would be at; and was sometimes apprehensive that he might be at that very moment an interesting case of spontaneous combustion, without having the consolation of knowing it. At last, however, he began to think\textemdash as you or I would have thought at first; for it is always the person not in the predicament who knows what ought to have been done in it, and would unquestionably have done it too\textemdash at last, I say, he began to think that the source and secret of this ghostly light might be in the adjoining room, from whence, on further tracing it, it seemed to shine. This idea taking full possession of his mind, he got up softly, and shuffled in his slippers to the door.
 
 The moment Scrooge's hand was on the lock a strange voice called him by his name, and bade him enter. He obeyed.
 
@@ -913,7 +929,7 @@ The house-fronts looked black enough, and the windows blacker, contrasting with 
 \end{minipage}
 \end{figure}
 
-For the people who were shovelling away on the house-tops were jovial and full of glee; calling out to one another from the parapets, and now and then exchanging a facetious snowball—better-natured missile far than many a wordy jest—laughing heartily if it went right, and not less heartily if it went wrong. The poulterers' shops were still half open, and the fruiterers' were radiant in their glory. There were great, round, pot-bellied baskets of chestnuts, shaped like the waistcoats of jolly old gentlemen, lolling at the doors, and tumbling out into the street in their apoplectic opulence: There were ruddy, brown-faced, broad-girthed Spanish onions, shining in the fatness of their growth like Spanish friars, and winking from their shelves in wanton slyness at the girls as they went by, and glanced demurely at the hung-up mistletoe. There were pears and apples clustered high in blooming pyramids; there were bunches of grapes, made, in the shopkeepers' benevolence, to dangle from conspicuous hooks that people's mouths might water gratis as they passed; there were piles of filberts, mossy and brown, recalling, in their fragrance, ancient walks among the woods, and pleasant shufflings ankle deep through withered leaves; there were Norfolk Biffins, squab and swarthy, setting off the yellow of the oranges and lemons, and, in the great compactness of their juicy persons, urgently entreating and beseeching to be carried home in paper bags and eaten after dinner. The very gold and silver fish, set forth among these choice fruits in a bowl, though members of a dull and stagnant-blooded race, appeared to know that there was something going on; and, to a fish, went gasping round and round their little world in slow and passionless excitement.
+For the people who were shovelling away on the house-tops were jovial and full of glee; calling out to one another from the parapets, and now and then exchanging a facetious snowball\textemdash better-natured missile far than many a wordy jest\textemdash laughing heartily if it went right, and not less heartily if it went wrong. The poulterers' shops were still half open, and the fruiterers' were radiant in their glory. There were great, round, pot-bellied baskets of chestnuts, shaped like the waistcoats of jolly old gentlemen, lolling at the doors, and tumbling out into the street in their apoplectic opulence: There were ruddy, brown-faced, broad-girthed Spanish onions, shining in the fatness of their growth like Spanish friars, and winking from their shelves in wanton slyness at the girls as they went by, and glanced demurely at the hung-up mistletoe. There were pears and apples clustered high in blooming pyramids; there were bunches of grapes, made, in the shopkeepers' benevolence, to dangle from conspicuous hooks that people's mouths might water gratis as they passed; there were piles of filberts, mossy and brown, recalling, in their fragrance, ancient walks among the woods, and pleasant shufflings ankle deep through withered leaves; there were Norfolk Biffins, squab and swarthy, setting off the yellow of the oranges and lemons, and, in the great compactness of their juicy persons, urgently entreating and beseeching to be carried home in paper bags and eaten after dinner. The very gold and silver fish, set forth among these choice fruits in a bowl, though members of a dull and stagnant-blooded race, appeared to know that there was something going on; and, to a fish, went gasping round and round their little world in slow and passionless excitement.
 
 The Grocers'! oh, the Grocers'! nearly closed, with perhaps two shutters down, or one; but through those gaps such glimpses! It was not alone that the scales descending on the counter made a merry sound, or that the twine and roller parted company so briskly, or that the canisters were rattled up and down like juggling tricks, or even that the blended scents of tea and coffee were so grateful to the nose, or even that the raisins were so plentiful and rare, the almonds so extremely white, the sticks of cinnamon so long and straight, the other spices so delicious, the candied fruits so caked and spotted with molten sugar as to make the coldest lookers-on feel faint, and subsequently bilious. Nor was it that the figs were moist and pulpy, or that the French plums blushed in modest tartness from their highly-decorated boxes, or that everything was good to eat and in its Christmas dress; but the customers were all so hurried and so eager in the hopeful promise of the day, that they tumbled up against each other at the door, crashing their wicker baskets wildly, and left their purchases upon the counter, and came running back to fetch them, and committed hundreds of the like mistakes, in the best humour possible; while the grocer and his people were so frank and fresh, that the polished hearts with which they fastened their aprons behind might have been their own, worn outside for general inspection, and for Christmas daws to peck at if they chose.
 
@@ -953,14 +969,14 @@ In time the bells ceased, and the bakers were shut up; and yet there was a genia
 
 Scrooge promised that he would; and they went on, invisible, as they had been before, into the suburbs of the town. It was a remarkable quality of the Ghost (which Scrooge had observed at the baker's), that notwithstanding his gigantic size, he could accommodate himself to any place with ease; and that he stood beneath a low roof quite as gracefully and like a supernatural creature as it was possible he could have done in any lofty hall.
 
+
+
 And perhaps it was the pleasure the good Spirit had in showing off this power of his, or else it was his own kind, generous, hearty nature, and his sympathy with all poor men, that led him straight to Scrooge's clerk's; for there he went, and took Scrooge with him, holding to his robe; and on the threshold of the door the Spirit smiled, and stopped to bless Bob Cratchit's dwelling with the sprinklings of his torch. Think of that! Bob had but fifteen \enquote{Bob} a week himself; he pocketed on Saturdays but fifteen copies of his Christian name; and yet the Ghost of Christmas Present blessed his four-roomed house!
 
+
+
 Then up rose Mrs Cratchit, Cratchit's wife, dressed out but poorly in a twice-turned gown, but brave in ribbons, which are cheap, and make a goodly show for sixpence; and she laid the cloth, assisted by Belinda Cratchit, second of her daughters, also brave in ribbons; while Master Peter Cratchit plunged a fork into the saucepan of potatoes, and getting the corners of his monstrous shirt-collar (Bob's private property, conferred upon his son and heir in honour of the day,) into his mouth, rejoiced to find himself so gallantly attired, and yearned to show his linen in the fashionable Parks. And now two smaller Cratchits, boy and girl, came tearing in, screaming that outside the baker's they had smelt the goose, and known it for their own; and basking in luxurious thoughts of sage and onion, these young Cratchits danced about the table, and exalted Master Peter Cratchit to the skies, while he (not proud, although his collars nearly choked him) blew the fire, until the slow potatoes, bubbling up, knocked loudly at the saucepan-lid to be let out and peeled.
-\cleardoubleevenemptypage
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{gs109}
-\end{figure}
+
 
 \enquote{What has ever got your precious father, then?} said Mrs Cratchit. \enquote{And your brother, Tiny Tim? And Martha warn't as late last Christmas Day by half an hour!}
 
@@ -972,18 +988,19 @@ Then up rose Mrs Cratchit, Cratchit's wife, dressed out but poorly in a twice-tu
 
 \enquote{We'd a deal of work to finish up last night,} replied the girl, \enquote{and had to clear away this morning, mother!}
 
+
+
+\cleardoubleevenemptypage
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{gs109}
+\end{figure}
+
 \enquote{Well! never mind so long as you are come,} said Mrs Cratchit. \enquote{Sit ye down before the fire, my dear, and have a warm, Lord bless ye!}
 
 \enquote{No, no! There's father coming,} cried the two young Cratchits, who were everywhere at once. \enquote{Hide, Martha, hide!}
 
 So Martha hid herself, and in came little Bob, the father, with at least three feet of comforter, exclusive of the fringe, hanging down before him, and his threadbare clothes darned up and brushed to look seasonable, and Tiny Tim upon his shoulder. Alas for Tiny Tim, he bore a little crutch, and had his limbs supported by an iron frame!
-
- \begin{center}
-     \vfill%push the image down
-     \includegraphics[width=\columnwidth]{gs109b}
-\captionof*{figure}{He had been Tim's blood-horse all the way from church}
- \end{center}
-\clearpage
 
 
 \enquote{Why, where's our Martha?} cried Bob Cratchit, looking round.
@@ -997,21 +1014,30 @@ Martha didn't like to see him disappointed, if it were only in joke; so she came
 
 \enquote{And how did little Tim behave?} asked Mrs Cratchit when she had rallied Bob on his credulity, and Bob had hugged his daughter to his heart's content.
 
+
+ \begin{center}
+     \vfill%push the image down
+     \includegraphics[width=\columnwidth]{gs109b}
+\captionof*{figure}{He had been Tim's blood-horse all the way from church}
+ \end{center}
+
+
+
+
 \enquote{As good as gold,} said Bob, \enquote{and better. Somehow, he gets thoughtful, sitting by himself so much, and thinks the strangest things you ever heard. He told me, coming home, that he hoped the people saw him in the church, because he was a cripple, and it might be pleasant to them to remember upon Christmas Day who made lame beggars walk and blind men see.}
 
 Bob's voice was tremulous when he told them this, and trembled more when he said that Tiny Tim was growing strong and hearty.
 
-His active little crutch was heard upon the floor, and back came Tiny Tim before another word was spoken, escorted by his brother and sister to his stool beside the fire; and while Bob, turning up his cuffs—as if, poor fellow, they were capable of being made more shabby—compounded some hot mixture in a jug with gin and lemons, and stirred it round and round, and put it on the hob to simmer, Master Peter and the two ubiquitous young Cratchits went to fetch the goose, with which they soon returned in high procession.
+His active little crutch was heard upon the floor, and back came Tiny Tim before another word was spoken, escorted by his brother and sister to his stool beside the fire; and while Bob, turning up his cuffs\textemdash as if, poor fellow, they were capable of being made more shabby\textemdash compounded some hot mixture in a jug with gin and lemons, and stirred it round and round, and put it on the hob to simmer, Master Peter and the two ubiquitous young Cratchits went to fetch the goose, with which they soon returned in high procession.
 
 
+Such a bustle ensued that you might have thought a goose the rarest of all birds; a feathered phenomenon, to which a black swan was a matter of course\textemdash and, in truth, it was something very like it in that house. Mrs Cratchit made the gravy (ready beforehand in a little saucepan) hissing hot; Master Peter mashed the potatoes with incredible vigour; Miss Belinda sweetened up the apple sauce; Martha dusted the hot plates; Bob took Tiny Tim beside him in a tiny corner at the table; the two young Cratchits set chairs for everybody, not forgetting themselves, and, mounting guard upon their posts, crammed spoons into their mouths, lest they should shriek for goose before their turn came to be helped. At last the dishes were set on, and grace was said. It was succeeded by a breathless pause, as Mrs Cratchit, looking slowly all along the carving-knife, prepared to plunge it in the breast; but when she did, and when the long-expected gush of stuffing issued forth, one murmur of delight arose all round the board, and even Tiny Tim, excited by the two young Cratchits, beat on the table with the handle of his knife and feebly cried \enquote{Hurrah!}
 
-Such a bustle ensued that you might have thought a goose the rarest of all birds; a feathered phenomenon, to which a black swan was a matter of course—and, in truth, it was something very like it in that house. Mrs Cratchit made the gravy (ready beforehand in a little saucepan) hissing hot; Master Peter mashed the potatoes with incredible vigour; Miss Belinda sweetened up the apple sauce; Martha dusted the hot plates; Bob took Tiny Tim beside him in a tiny corner at the table; the two young Cratchits set chairs for everybody, not forgetting themselves, and, mounting guard upon their posts, crammed spoons into their mouths, lest they should shriek for goose before their turn came to be helped. At last the dishes were set on, and grace was said. It was succeeded by a breathless pause, as Mrs Cratchit, looking slowly all along the carving-knife, prepared to plunge it in the breast; but when she did, and when the long-expected gush of stuffing issued forth, one murmur of delight arose all round the board, and even Tiny Tim, excited by the two young Cratchits, beat on the table with the handle of his knife and feebly cried Hurrah!
+There never was such a goose. Bob said he didn't believe there ever was such a goose cooked. Its tenderness and flavour, size and cheapness, were the themes of universal admiration. Eked out by apple sauce and mashed potatoes, it was a sufficient dinner for the whole family; indeed, as Mrs Cratchit said with great delight (surveying one small atom of a bone upon the dish), they hadn't ate it all at last! Yet every one had had enough, and the youngest Cratchits, in particular, were steeped in sage and onion to the eyebrows! But now, the plates being changed by Miss Belinda, Mrs Cratchit left the room alone\textemdash too nervous to bear witnesses\textemdash to take the pudding up, and bring it in.
 
-There never was such a goose. Bob said he didn't believe there ever was such a goose cooked. Its tenderness and flavour, size and cheapness, were the themes of universal admiration. Eked out by apple sauce and mashed potatoes, it was a sufficient dinner for the whole family; indeed, as Mrs Cratchit said with great delight (surveying one small atom of a bone upon the dish), they hadn't ate it all at last! Yet every one had had enough, and the youngest Cratchits, in particular, were steeped in sage and onion to the eyebrows! But now, the plates being changed by Miss Belinda, Mrs Cratchit left the room alone—too nervous to bear witnesses—to take the pudding up, and bring it in.
+Suppose it should not be done enough! Suppose it should break in turning out! Suppose somebody should have got over the wall of the back-yard and stolen it, while they were merry with the goose\textemdash a supposition at which the two young Cratchits became livid! All sorts of horrors were supposed.
 
-Suppose it should not be done enough! Suppose it should break in turning out! Suppose somebody should have got over the wall of the back-yard and stolen it, while they were merry with the goose—a supposition at which the two young Cratchits became livid! All sorts of horrors were supposed.
-
-Hallo! A great deal of steam! The pudding was out of the copper. A smell like a washing-day! That was the cloth. A smell like an eating-house and a pastry-cook's next door to each other, with a laundress's next door to that! That was the pudding! In half a minute Mrs Cratchit entered—flushed, but smiling proudly—with the pudding, like a speckled cannon-ball, so hard and firm, blazing in half of half-a-quartern of ignited brandy, and bedight with Christmas holly stuck into the top.
+Hallo! A great deal of steam! The pudding was out of the copper. A smell like a washing-day! That was the cloth. A smell like an eating-house and a pastry-cook's next door to each other, with a laundress's next door to that! That was the pudding! In half a minute Mrs Cratchit entered\textemdash flushed, but smiling proudly\textemdash with the pudding, like a speckled cannon-ball, so hard and firm, blazing in half of half-a-quartern of ignited brandy, and bedight with Christmas holly stuck into the top.
 
 Oh, a wonderful pudding! Bob Cratchit said, and calmly too, that he regarded it as the greatest success achieved by Mrs Cratchit since their marriage. Mrs Cratchit said that, now the weight was off her mind, she would confess she had her doubts about the quantity of flour. Everybody had something to say about it, but nobody said or thought it was at all a small pudding for a large family. It would have been flat heresy to do so. Any Cratchit would have blushed to hint at such a thing.
 
@@ -1066,7 +1092,7 @@ After it had passed away they were ten times merrier than before, from the mere 
 
 There was nothing of high mark in this. They were not a handsome family; they were not well dressed; their shoes were far from being waterproof; their clothes were scanty; and Peter might have known, and very likely did, the inside of a pawnbroker's. But they were happy, grateful, pleased with one another, and contented with the time; and when they faded, and looked happier yet in the bright sprinklings of the Spirit's torch at parting, Scrooge had his eye upon them, and especially on Tiny Tim, until the last.
 
-By this time it was getting dark, and snowing pretty heavily; and as Scrooge and the Spirit went along the streets, the brightness of the roaring fires in kitchens, parlours, and all sorts of rooms was wonderful. Here, the flickering of the blaze showed preparations for a cosy dinner, with hot plates baking through and through before the fire, and deep red curtains, ready to be drawn to shut out cold and darkness. There, all the children of the house were running out into the snow to meet their married sisters, brothers, cousins, uncles, aunts, and be the first to greet them. Here, again, were shadows on the window-blinds of guests assembling; and there a group of handsome girls, all hooded and fur-booted, and all chattering at once, tripped lightly off to some near neighbour's house; where, woe upon the single man who saw them enter—artful witches, well they knew it—in a glow!
+By this time it was getting dark, and snowing pretty heavily; and as Scrooge and the Spirit went along the streets, the brightness of the roaring fires in kitchens, parlours, and all sorts of rooms was wonderful. Here, the flickering of the blaze showed preparations for a cosy dinner, with hot plates baking through and through before the fire, and deep red curtains, ready to be drawn to shut out cold and darkness. There, all the children of the house were running out into the snow to meet their married sisters, brothers, cousins, uncles, aunts, and be the first to greet them. Here, again, were shadows on the window-blinds of guests assembling; and there a group of handsome girls, all hooded and fur-booted, and all chattering at once, tripped lightly off to some near neighbour's house; where, woe upon the single man who saw them enter\textemdash artful witches, well they knew it\textemdash in a glow!
 
 But, if you had judged from the numbers of people on their way to friendly gatherings, you might have thought that no one was at home to give them welcome when they got there, instead of every house expecting company, and piling up its fires half-chimney high. Blessings on it, how the Ghost exulted! How it bared its breadth of breast, and opened its capacious palm, and floated on, outpouring with a generous hand its bright and harmless mirth on everything within its reach! The very lamplighter, who ran on before, dotting the dusky street with specks of light, and who was dressed to spend the evening somewhere, laughed out loudly as the Spirit passed, though little kenned the lamplighter that he had any company but Christmas.
 
@@ -1080,11 +1106,11 @@ A light shone from the window of a hut, and swiftly they advanced towards it. Pa
 
 The Spirit did not tarry here, but bade Scrooge hold his robe, and, passing on above the moor, sped whither? Not to sea? To sea. To Scrooge's horror, looking back, he saw the last of the land, a frightful range of rocks, behind them; and his ears were deafened by the thundering of water, as it rolled and roared, and raged among the dreadful caverns it had worn, and fiercely tried to undermine the earth.
 
-Built upon a dismal reef of sunken rocks, some league or so from shore, on which the waters chafed and dashed, the wild year through, there stood a solitary lighthouse. Great heaps of seaweed clung to its base, and storm-birds—born of the wind, one might suppose, as seaweed of the water—rose and fell about it, like the waves they skimmed.
+Built upon a dismal reef of sunken rocks, some league or so from shore, on which the waters chafed and dashed, the wild year through, there stood a solitary lighthouse. Great heaps of seaweed clung to its base, and storm-birds\textemdash born of the wind, one might suppose, as seaweed of the water\textemdash rose and fell about it, like the waves they skimmed.
 
-But, even here, two men who watched the light had made a fire, that through the loophole in the thick stone wall shed out a ray of brightness on the awful sea. Joining their horny hands over the rough table at which they sat, they wished each other Merry Christmas in their can of grog; and one of them—the elder too, with his face all damaged and scarred with hard weather, as the figure-head of an old ship might be—struck up a sturdy song that was like a gale in itself.
+But, even here, two men who watched the light had made a fire, that through the loophole in the thick stone wall shed out a ray of brightness on the awful sea. Joining their horny hands over the rough table at which they sat, they wished each other Merry Christmas in their can of grog; and one of them\textemdash the elder too, with his face all damaged and scarred with hard weather, as the figure-head of an old ship might be\textemdash struck up a sturdy song that was like a gale in itself.
 
-Again the Ghost sped on, above the black and heaving sea—on, on—until being far away, as he told Scrooge, from any shore, they lighted on a ship. They stood beside the helmsman at the wheel, the look-out in the bow, the officers who had the watch; dark, ghostly figures in their several stations; but every man among them hummed a Christmas tune, or had a Christmas thought, or spoke below his breath to his companion of some bygone Christmas Day, with homeward hopes belonging to it. And every man on board, waking or sleeping, good or bad, had had a kinder word for one another on that day than on any day in the year; and had shared to some extent in its festivities; and had remembered those he cared for at a distance, and had known that they delighted to remember him.
+Again the Ghost sped on, above the black and heaving sea\textemdash on, on\textemdash until being far away, as he told Scrooge, from any shore, they lighted on a ship. They stood beside the helmsman at the wheel, the look-out in the bow, the officers who had the watch; dark, ghostly figures in their several stations; but every man among them hummed a Christmas tune, or had a Christmas thought, or spoke below his breath to his companion of some bygone Christmas Day, with homeward hopes belonging to it. And every man on board, waking or sleeping, good or bad, had had a kinder word for one another on that day than on any day in the year; and had shared to some extent in its festivities; and had remembered those he cared for at a distance, and had known that they delighted to remember him.
 
 It was a great surprise to Scrooge, while listening to the moaning of the wind, and thinking what a solemn thing it was to move on through the lonely darkness over an unknown abyss, whose depths were secrets as profound as death: it was a great surprise to Scrooge, while thus engaged, to hear a hearty laugh. It was a much greater surprise to Scrooge to recognise it as his own nephew's and to find himself in a bright, dry, gleaming room, with the Spirit standing smiling by his side, and looking at that same nephew with approving affability!
 
@@ -1092,7 +1118,7 @@ It was a great surprise to Scrooge, while listening to the moaning of the wind, 
 
 If you should happen, by any unlikely chance, to know a man more blessed in a laugh than Scrooge's nephew, all I can say is, I should like to know him too. Introduce him to me, and I'll cultivate his acquaintance.
 
-It is a fair, even-handed, noble adjustment of things, that while there is infection in disease and sorrow, there is nothing in the world so irresistibly contagious as laughter and good-humour. When Scrooge's nephew laughed in this way—holding his sides, rolling his head, and twisting his face into the most extravagant contortions—Scrooge's niece, by marriage, laughed as heartily as he. And their assembled friends, being not a bit behindhand, roared out lustily.
+It is a fair, even-handed, noble adjustment of things, that while there is infection in disease and sorrow, there is nothing in the world so irresistibly contagious as laughter and good-humour. When Scrooge's nephew laughed in this way\textemdash holding his sides, rolling his head, and twisting his face into the most extravagant contortions\textemdash Scrooge's niece, by marriage, laughed as heartily as he. And their assembled friends, being not a bit behindhand, roared out lustily.
 
 \enquote{Ha, ha! Ha, ha, ha, ha!}
 
@@ -1100,13 +1126,13 @@ It is a fair, even-handed, noble adjustment of things, that while there is infec
 
 \enquote{More shame for him, Fred!} said Scrooge's niece indignantly. Bless those women! they never do anything by halves. They are always in earnest.
 
-She was very pretty; exceedingly pretty. With a dimpled, surprised-looking, capital face; a ripe little mouth, that seemed made to be kissed—as no doubt it was; all kinds of good little dots about her chin, that melted into one another when she laughed; and the sunniest pair of eyes you ever saw in any little creature's head. Altogether she was what you would have called provoking, you know; but satisfactory, too. Oh, perfectly satisfactory!
+She was very pretty; exceedingly pretty. With a dimpled, surprised-looking, capital face; a ripe little mouth, that seemed made to be kissed\textemdash as no doubt it was; all kinds of good little dots about her chin, that melted into one another when she laughed; and the sunniest pair of eyes you ever saw in any little creature's head. Altogether she was what you would have called provoking, you know; but satisfactory, too. Oh, perfectly satisfactory!
 
 \enquote{He's a comical old fellow,} said Scrooge's nephew, \enquote{that's the truth; and not so pleasant as he might be. However, his offences carry their own punishment, and I have nothing to say against him.}
 
 \enquote{I'm sure he is very rich, Fred,} hinted Scrooge's niece. \enquote{At least, you always tell \textit{me} so.}
 
-\enquote{What of that, my dear?} said Scrooge's nephew. \enquote{His wealth is of no use to him. He don't do any good with it. He don't make himself comfortable with it. He hasn't the satisfaction of thinking—ha, ha, ha!—that he is ever going to benefit Us with it.}
+\enquote{What of that, my dear?} said Scrooge's nephew. \enquote{His wealth is of no use to him. He don't do any good with it. He don't make himself comfortable with it. He hasn't the satisfaction of thinking\textemdash ha, ha, ha!\textemdash that he is ever going to benefit Us with it.}
 
 \enquote{I have no patience with him,} observed Scrooge's niece. Scrooge's niece's sisters, and all the other ladies, expressed the same opinion.
 
@@ -1116,13 +1142,13 @@ She was very pretty; exceedingly pretty. With a dimpled, surprised-looking, capi
 
 \enquote{Well! I am very glad to hear it,} said Scrooge's nephew, \enquote{because I haven't any great faith in these young housekeepers. What do \textit{you} say, Topper?}
 
-Topper had clearly got his eye upon one of Scrooge's niece's sisters, for he answered that a bachelor was a wretched outcast, who had no right to express an opinion on the subject. Whereat Scrooge's niece's sister—the plump one with the lace tucker: not the one with the roses—blushed.
+Topper had clearly got his eye upon one of Scrooge's niece's sisters, for he answered that a bachelor was a wretched outcast, who had no right to express an opinion on the subject. Whereat Scrooge's niece's sister\textemdash the plump one with the lace tucker: not the one with the roses\textemdash blushed.
 
 \enquote{Do go on, Fred,} said Scrooge's niece, clapping her hands. \enquote{He never finishes what he begins to say! He is such a ridiculous fellow!}
 
 Scrooge's nephew revelled in another laugh, and as it was impossible to keep the infection off, though the plump sister tried hard to do it with aromatic vinegar, his example was unanimously followed.
 
-\enquote{I was only going to say,} said Scrooge's nephew, \enquote{that the consequence of his taking a dislike to us, and not making merry with us, is, as I think, that he loses some pleasant moments, which could do him no harm. I am sure he loses pleasanter companions than he can find in his own thoughts, either in his mouldy old office or his dusty chambers. I mean to give him the same chance every year, whether he likes it or not, for I pity him. He may rail at Christmas till he dies, but he can't help thinking better of it—I defy him—if he finds me going there, in good temper, year after year, and saying, \enquote{Uncle Scrooge, how are you?} If it only put him in the vein to leave his poor clerk fifty pounds, \textit{that's} something; and I think I shook him yesterday.}
+\enquote{I was only going to say,} said Scrooge's nephew, \enquote{that the consequence of his taking a dislike to us, and not making merry with us, is, as I think, that he loses some pleasant moments, which could do him no harm. I am sure he loses pleasanter companions than he can find in his own thoughts, either in his mouldy old office or his dusty chambers. I mean to give him the same chance every year, whether he likes it or not, for I pity him. He may rail at Christmas till he dies, but he can't help thinking better of it\textemdash I defy him\textemdash if he finds me going there, in good temper, year after year, and saying, \enquote{Uncle Scrooge, how are you?} If it only put him in the vein to leave his poor clerk fifty pounds, \textit{that's} something; and I think I shook him yesterday.}
 
 It was their turn to laugh now, at the notion of his shaking Scrooge. But being thoroughly good-natured, and not much caring what they laughed at, so that they laughed at any rate, he encouraged them in their merriment, and passed the bottle, joyously.
 
@@ -1200,11 +1226,10 @@ The bell struck Twelve.
 
 Scrooge looked about him for the Ghost, and saw it not. As the last stroke ceased to vibrate, he remembered the prediction of old Jacob Marley, and, lifting up his eyes, beheld a solemn Phantom, draped and hooded, coming like a mist along the ground towards him.
 
-\begin{figure}[h]
+\begin{figure}[tbh]
 \centering
 \includegraphics[width=.5\linewidth]{gs056}
 \end{figure}
-
 
 \addchap[Stave IV: The Last of the Spirits]{Stave Four: The Last of the Spirits}
 \begin{minipage}[c]{\linewidth}
@@ -1381,7 +1406,7 @@ Scrooge listened to this dialogue in horror. As they sat grouped about their spo
 
 \enquote{Spirit!} said Scrooge, shuddering from head to foot. \enquote{I see, I see. The case of this unhappy man might be my own. My life tends that way now. Merciful heaven, what is this?}
 
-He recoiled in terror, for the scene had changed, and now he almost touched a bed—a bare, uncurtained bed—on which, beneath a ragged sheet, there lay a something covered up, which, though it was dumb, announced itself in awful language.
+He recoiled in terror, for the scene had changed, and now he almost touched a bed\textemdash a bare, uncurtained bed\textemdash on which, beneath a ragged sheet, there lay a something covered up, which, though it was dumb, announced itself in awful language.
 
 The room was very dark, too dark to be observed with any accuracy, though Scrooge glanced round it in obedience to a secret impulse, anxious to know what kind of room it was. A pale light, rising in the outer air, fell straight upon the bed; and on it, plundered and bereft, unwatched, unwept, uncared for, was the body of this man.
 
@@ -1425,7 +1450,7 @@ He sat down to the dinner that had been hoarding for him by the fire, and when s
 
 She was a mild and patient creature, if her face spoke truth; but she was thankful in her soul to hear it, and she said so with clasped hands. She prayed forgiveness the next moment, and was sorry; but the first was the emotion of her heart.
 
-\enquote{What the half-drunken woman, whom I told you of last night, said to me when I tried to see him and obtain a week's delay—and what I thought was a mere excuse to avoid me—turns out to have been quite true. He was not only very ill, but dying, then.}
+\enquote{What the half-drunken woman, whom I told you of last night, said to me when I tried to see him and obtain a week's delay\textemdash and what I thought was a mere excuse to avoid me\textemdash turns out to have been quite true. He was not only very ill, but dying, then.}
 
 \enquote{To whom will our debt be transferred?}
 
@@ -1455,7 +1480,7 @@ The colour? Ah, poor Tiny Tim!
 
 They were very quiet again. At last she said, and in a steady, cheerful voice, that only faltered once:
 
-\enquote{I have known him walk with—I have known him walk with Tiny Tim upon his shoulder very fast indeed.}
+\enquote{I have known him walk with\textemdash I have known him walk with Tiny Tim upon his shoulder very fast indeed.}
 
 \enquote{And so have I,} cried Peter. \enquote{Often.}
 
@@ -1463,7 +1488,7 @@ They were very quiet again. At last she said, and in a steady, cheerful voice, t
 
 \enquote{But he was very light to carry,} she resumed, intent upon her work, \enquote{and his father loved him so, that it was no trouble, no trouble. And there is your father at the door!}
 
-She hurried out to meet him; and little Bob in his comforter—he had need of it, poor fellow—came in. His tea was ready for him on the hob, and they all tried who should help him to it most. Then the two young Cratchits got upon his knees, and laid, each child, a little cheek against his face, as if they said, \enquote{Don't mind it, father. Don't be grieved!}
+She hurried out to meet him; and little Bob in his comforter\textemdash he had need of it, poor fellow\textemdash came in. His tea was ready for him on the hob, and they all tried who should help him to it most. Then the two young Cratchits got upon his knees, and laid, each child, a little cheek against his face, as if they said, \enquote{Don't mind it, father. Don't be grieved!}
 
 Bob was very cheerful with them, and spoke pleasantly to all the family. He looked at the work upon the table, and praised the industry and speed of Mrs Cratchit and the girls. They would be done long before Sunday, he said.
 
@@ -1475,7 +1500,7 @@ He broke down all at once. He couldn't help it. If he could have helped it, he a
 
 He left the room, and went upstairs into the room above, which was lighted cheerfully, and hung with Christmas. There was a chair set close beside the child, and there were signs of some one having been there lately. Poor Bob sat down in it, and when he had thought a little and composed himself, he kissed the little face. He was reconciled to what had happened, and went down again quite happy.
 
-They drew about the fire, and talked, the girls and mother working still. Bob told them of the extraordinary kindness of Mr Scrooge's nephew, whom he had scarcely seen but once, and who, meeting him in the street that day, and seeing that he looked a little—'just a little down, you know,' said Bob, inquired what had happened to distress him. \enquote{On which,} said Bob, \enquote{for he is the pleasantest-spoken gentleman you ever heard, I told him. \enquote{I am heartily sorry for it, Mr Cratchit,} he said, \enquote{and heartily sorry for your good wife.} By-the-bye, how he ever knew \textit{that} I don't know.}
+They drew about the fire, and talked, the girls and mother working still. Bob told them of the extraordinary kindness of Mr Scrooge's nephew, whom he had scarcely seen but once, and who, meeting him in the street that day, and seeing that he looked a little\textemdash 'just a little down, you know,' said Bob, inquired what had happened to distress him. \enquote{On which,} said Bob, \enquote{for he is the pleasantest-spoken gentleman you ever heard, I told him. \enquote{I am heartily sorry for it, Mr Cratchit,} he said, \enquote{and heartily sorry for your good wife.} By-the-bye, how he ever knew \textit{that} I don't know.}
 
 \enquote{Knew what, my dear?}
 
@@ -1487,7 +1512,7 @@ They drew about the fire, and talked, the girls and mother working still. Bob to
 
 \enquote{I'm sure he's a good soul!} said Mrs Cratchit.
 
-\enquote{You would be sure of it, my dear,} returned Bob, \enquote{if you saw and spoke to him. I shouldn't be at all surprised—mark what I say!—if he got Peter a better situation.}
+\enquote{You would be sure of it, my dear,} returned Bob, \enquote{if you saw and spoke to him. I shouldn't be at all surprised\textemdash mark what I say!\textemdash if he got Peter a better situation.}
 
 \enquote{Only hear that, Peter,} said Mrs Cratchit.
 
@@ -1495,7 +1520,7 @@ They drew about the fire, and talked, the girls and mother working still. Bob to
 
 \enquote{Get along with you!} retorted Peter, grinning.
 
-\enquote{It's just as likely as not,} said Bob, \enquote{one of these days; though there's plenty of time for that, my dear. But, however and whenever we part from one another, I am sure we shall none of us forget poor Tiny Tim—shall we—or this first parting that there was among us?}
+\enquote{It's just as likely as not,} said Bob, \enquote{one of these days; though there's plenty of time for that, my dear. But, however and whenever we part from one another, I am sure we shall none of us forget poor Tiny Tim\textemdash shall we\textemdash or this first parting that there was among us?}
 
 \enquote{Never, father!} cried they all.
 
@@ -1509,7 +1534,7 @@ Mrs Cratchit kissed him, his daughters kissed him, the two young Cratchits kisse
 
 \enquote{Spectre,} said Scrooge, \enquote{something informs me that our parting moment is at hand. I know it but I know not how. Tell me what man that was whom we saw lying dead?}
 
-The Ghost of Christmas Yet to Come conveyed him, as before—though at a different time, he thought: indeed there seemed no order in these latter visions, save that they were in the Future—into the resorts of business men, but showed him not himself. Indeed, the Spirit did not stay for anything, but went straight on, as to the end just now desired, until besought by Scrooge to tarry for a moment.
+The Ghost of Christmas Yet to Come conveyed him, as before\textemdash though at a different time, he thought: indeed there seemed no order in these latter visions, save that they were in the Future\textemdash into the resorts of business men, but showed him not himself. Indeed, the Spirit did not stay for anything, but went straight on, as to the end just now desired, until besought by Scrooge to tarry for a moment.
 
 \enquote{This court,} said Scrooge, \enquote{through which we hurry now, is where my place of occupation is, and has been for a length of time. I see the house. Let me behold what I shall be in days to come.}
 
@@ -1572,7 +1597,7 @@ Holding up his hands in a last prayer to have his fate reversed, he saw an alter
 
 He was so fluttered and so glowing with his good intentions, that his broken voice would scarcely answer to his call. He had been sobbing violently in his conflict with the Spirit, and his face was wet with tears.
 
-\enquote{They are not torn down,} cried Scrooge, folding one of his bed-curtains in his arms, \enquote{They are not torn down, rings and all. They are here—I am here—the shadows of the things that would have been may be dispelled. They will be. I know they will!}
+\enquote{They are not torn down,} cried Scrooge, folding one of his bed-curtains in his arms, \enquote{They are not torn down, rings and all. They are here\textemdash I am here\textemdash the shadows of the things that would have been may be dispelled. They will be. I know they will!}
 
 His hands were busy with his garments all this time: turning them inside out, putting them on upside down, tearing them, mislaying them, making them parties to every kind of extravagance.
 
@@ -1606,7 +1631,7 @@ Running to the window, he opened it, and put out his head. No fog, no mist; clea
 
 \enquote{I should hope I did,} replied the lad.
 
-\enquote{An intelligent boy!} said Scrooge. \enquote{A remarkable boy! Do you know whether they've sold the prize turkey that was hanging up there?—Not the little prize turkey: the big one?}
+\enquote{An intelligent boy!} said Scrooge. \enquote{A remarkable boy! Do you know whether they've sold the prize turkey that was hanging up there?\textemdash Not the little prize turkey: the big one?}
 
 \enquote{What! the one as big as me?} returned the boy.
 
@@ -1626,7 +1651,7 @@ The boy was off like a shot. He must have had a steady hand at a trigger who cou
 
 The hand in which he wrote the address was not a steady one; but write it he did, somehow, and went downstairs to open the street-door, ready for the coming of the poulterer's man. As he stood there, waiting his arrival, the knocker caught his eye.
 
-\enquote{I shall love it as long as I live!} cried Scrooge, patting it with his hand. \enquote{I scarcely ever looked at it before. What an honest expression it has in its face! It's a wonderful knocker!—Here's the turkey. Hallo! Whoop! How are you! Merry Christmas!}
+\enquote{I shall love it as long as I live!} cried Scrooge, patting it with his hand. \enquote{I scarcely ever looked at it before. What an honest expression it has in its face! It's a wonderful knocker!\textemdash Here's the turkey. Hallo! Whoop! How are you! Merry Christmas!}
 
 It \textit{was} a turkey! He never could have stood upon his legs, that bird. He would have snapped `em short off in a minute, like sticks of sealing-wax.
 
@@ -1642,15 +1667,22 @@ He had not gone far when, coming on towards him, he beheld the portly gentleman 
 
 \enquote{My dear sir,} said Scrooge, quickening his pace, and taking the old gentleman by both his hands, \enquote{how do you do? I hope you succeeded yesterday. It was very kind of you. A merry Christmas to you, sir!}
 
+\begin{figure}[p]
+\begin{minipage}[c]{\linewidth}
+\includegraphics[width=\linewidth]{freddinner}
+\caption*{\enquote{It's I, your uncle Scrooge. I have come to dinner. Will you let me in, Fred?}}
+\end{minipage}
+\end{figure}
+
 \enquote{Mr Scrooge?}
 
-\enquote{Yes,} said Scrooge. \enquote{That is my name, and I fear it may not be pleasant to you. Allow me to ask your pardon. And will you have the goodness——} Here Scrooge whispered in his ear.
+\enquote{Yes,} said Scrooge. \enquote{That is my name, and I fear it may not be pleasant to you. Allow me to ask your pardon. And will you have the goodness\textemdash \textemdash } Here Scrooge whispered in his ear.
 
 \enquote{Lord bless me!} cried the gentleman, as if his breath were taken away. \enquote{My dear Mr Scrooge, are you serious?}
 
 \enquote{If you please,} said Scrooge. \enquote{Not a farthing less. A great many back-payments are included in it, I assure you. Will you do me that favour?}
 
-\enquote{My dear sir,} said the other, shaking hands with him, \enquote{I don't know what to say to such munifi——}
+\enquote{My dear sir,} said the other, shaking hands with him, \enquote{I don't know what to say to such munifi\textemdash \textemdash }
 
 \enquote{Don't say anything, please,} retorted Scrooge. \enquote{Come and see me. Will you come and see me?}
 
@@ -1658,7 +1690,7 @@ He had not gone far when, coming on towards him, he beheld the portly gentleman 
 
 \enquote{Thankee,} said Scrooge. \enquote{I am much obliged to you. I thank you fifty times. Bless you!}
 
-He went to church, and walked about the streets, and watched the people hurrying to and fro, and patted the children on the head, and questioned beggars, and looked down into the kitchens of houses, and up to the windows; and found that everything could yield him pleasure. He had never dreamed that any walk—that anything—could give him so much happiness. In the afternoon he turned his steps towards his nephew's house.
+He went to church, and walked about the streets, and watched the people hurrying to and fro, and patted the children on the head, and questioned beggars, and looked down into the kitchens of houses, and up to the windows; and found that everything could yield him pleasure. He had never dreamed that any walk\textemdash that anything\textemdash could give him so much happiness. In the afternoon he turned his steps towards his nephew's house.
 
 He passed the door a dozen times before he had the courage to go up and knock. But he made a dash and did it.
 
@@ -1680,18 +1712,20 @@ Dear heart alive, how his niece by marriage started! Scrooge had forgotten, for 
 
 \enquote{Why, bless my soul!} cried Fred, \enquote{who's that?}
 
-\begin{figure}[p]
-\begin{minipage}[c]{\linewidth}
-\includegraphics[width=\linewidth]{freddinner}
-\caption*{\enquote{It's I, your uncle Scrooge. I have come to dinner. Will you let me in, Fred?}}
-\end{minipage}
-\end{figure}
+
 
 \enquote{It's I. Your uncle Scrooge. I have come to dinner. Will you let me in, Fred?}
 
 Let him in! It is a mercy he didn't shake his arm off. He was at home in five minutes. Nothing could be heartier. His niece looked just the same. So did Topper when \textit{he} came. So did the plump sister when \textit{she} came. So did every one when \textit{they} came. Wonderful party, wonderful games, wonderful unanimity, won-der-ful happiness!
 
 But he was early at the office next morning. Oh, he was early there! If he could only be there first, and catch Bob Cratchit coming late! That was the thing he had set his heart upon.
+
+\begin{figure}[p]
+\begin{minipage}[c]{\linewidth}
+\includegraphics[width=\linewidth]{boblate}
+\caption*{\enquote{Now, I'll tell you what, my friend,} said Scrooge. \enquote{I am not going to stand this sort of thing any longer.}}
+\end{minipage}
+\end{figure}
 
 And he did it; yes, he did! The clock struck nine. No Bob. A quarter past. No Bob. He was full eighteen minutes and a half behind his time. Scrooge sat with his door wide open, that he might see him come into the tank.
 
@@ -1705,24 +1739,17 @@ His hat was off before he opened the door; his comforter too. He was on his stoo
 
 \enquote{It's only once a year, sir,} pleaded Bob, appearing from the tank. \enquote{It shall not be repeated. I was making rather merry yesterday, sir.}
 
-\enquote{Now, I'll tell you what, my friend,} said Scrooge. \enquote{I am not going to stand this sort of thing any longer. And therefore,} he continued, leaping from his stool, and giving Bob such a dig in the waistcoat that he staggered back into the tank again—\enquote{and therefore I am about to raise your salary!}
+\enquote{Now, I'll tell you what, my friend,} said Scrooge. \enquote{I am not going to stand this sort of thing any longer. And therefore,} he continued, leaping from his stool, and giving Bob such a dig in the waistcoat that he staggered back into the tank again\textemdash \enquote{and therefore I am about to raise your salary!}
 
 Bob trembled, and got a little nearer to the ruler. He had a momentary idea of knocking Scrooge down with it, holding him, and calling to the people in the court for help and a strait-waistcoat.
 
 \enquote{A merry Christmas, Bob!} said Scrooge, with an earnestness that could not be mistaken, as he clapped him on the back. \enquote{A merrier Christmas, Bob, my good fellow, than I have given you for many a year! I'll raise your salary, and endeavour to assist your struggling family, and we will discuss your affairs this very afternoon, over a Christmas bowl of smoking bishop, Bob! Make up the fires and buy another coal-scuttle before you dot another i, Bob Cratchit!}
 
-\begin{figure}[p]
-\begin{minipage}[c]{\linewidth}
-\includegraphics[width=\linewidth]{boblate}
-\caption*{\enquote{Now, I'll tell you what, my friend,} said Scrooge. \enquote{I am not going to stand this sort of thing any longer.}}
-\end{minipage}
-\end{figure}
-
 Scrooge was better than his word. He did it all, and infinitely more; and to Tiny Tim, who did \textsc{not} die, he was a second father. He became as good a friend, as good a master, and as good a man as the good old City knew, or any other good old city, town, or borough in the good old world. Some people laughed to see the alteration in him, but he let them laugh, and little heeded them; for he was wise enough to know that nothing ever happened on this globe, for good, at which some people did not have their fill of laughter in the outset; and knowing that such as these would be blind anyway, he thought it quite as well that they should wrinkle up their eyes in grins as have the malady in less attractive forms. His own heart laughed, and that was quite enough for him.
 
 He had no further intercourse with Spirits, but lived upon the Total-Abstinence Principle ever afterwards; and it was always said of him that he knew how to keep Christmas well, if any man alive possessed the knowledge. May that be truly said of us, and all of us! And so, as Tiny Tim observed, God bless Us, Every One!
 
-\begin{figure}[h]
+\begin{figure}[tbh]
 \centering
 \includegraphics[width=.5\linewidth]{gs182}
 \end{figure}
