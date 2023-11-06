@@ -24,7 +24,7 @@ If you are using A4 size paper:
 * Print out double-sided, flip on short side
 
 
-The TeX original is included in the source directory as acc.tex . It expects to find its images in a subfolder called "images" (in the folder where you run TeX) and uses the following packages:
+The TeX originals are included in the source directory as accletter.tex and acca4.tex. They expect to find their images in a subfolder called "images" (in the folder where you run TeX) and they use the following packages:
 * graphicx
 * xcolor
 * fontspec
@@ -40,6 +40,6 @@ The TeX original is included in the source directory as acc.tex . It expects to 
 * babel
 * ebgaramond
 
-It expects the following fonts installed:
+They expect the following fonts installed:
 * Menuetto https://www.1001freefonts.com/menuetto.font
 * Acorn Initials https://www.1001freefonts.com/acorn.font
