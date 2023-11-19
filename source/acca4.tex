@@ -1,5 +1,5 @@
 %\documentclass[paper=5.5in:8.5in,BCOR=10mm,twoside,DIV=15,12pt,usegeometry,openany]{scrbook} % Document font size and paper size
-\documentclass[paper=a5,BCOR=15mm,twoside,DIV=15,BCOR=10mm,twoside,DIV=15,12pt,usegeometry]{scrbook} % Document font size and paper size
+\documentclass[paper=a5,twoside,DIV=calc,BCOR=5mm,usegeometry]{scrbook} % Document font size and paper size
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{fontspec}
@@ -68,7 +68,7 @@
 
 \renewcommand*{\chapterpagestyle}{empty}
 \tableofcontents
-\begin{figure}
+\begin{figure}[bh]
 \centering
 \includegraphics[width=0.8\textwidth]{elfturkey}
 \end{figure}
@@ -415,14 +415,6 @@ Scrooge trembled more and more.
 
 \enquote{Or would you know,} pursued the Ghost, \enquote{the weight and length of the strong coil you bear yourself? It was full as heavy and as long as this seven Christmas Eves ago. You have laboured on it since. It is a ponderous chain!}
 
-Scrooge glanced about him on the floor, in the expectation of finding himself surrounded by some fifty or sixty fathoms of iron cable; but he could see nothing.
-
-
-
-\enquote{Jacob!} he said imploringly. \enquote{Old Jacob Marley, tell me more! Speak comfort to me, Jacob!}
-
-\enquote{I have none to give,} the Ghost replied. \enquote{It comes from other regions, Ebenezer Scrooge, and is conveyed by other ministers, to other kinds of men. Nor can I tell you what I would. A very little more is all permitted to me. I cannot rest, I cannot stay, I cannot linger anywhere. My spirit never walked beyond our counting-house\textemdash mark me;\textemdash in life my spirit never roved beyond the narrow limits of our money-changing hole; and weary journeys lie before me!}
-
 \cleardoubleevenemptypage
 \begin{center} 
 \vfill
@@ -431,12 +423,30 @@ Scrooge glanced about him on the floor, in the expectation of finding himself su
 
 \end{center}
 
+
+Scrooge glanced about him on the floor, in the expectation of finding himself surrounded by some fifty or sixty fathoms of iron cable; but he could see nothing.
+
+
+
+\enquote{Jacob!} he said imploringly. \enquote{Old Jacob Marley, tell me more! Speak comfort to me, Jacob!}
+
+\clearpage
+
+\enquote{I have none to give,} the Ghost replied. \enquote{It comes from other regions, Ebenezer Scrooge, and is conveyed by other ministers, to other kinds of men. Nor can I tell you what I would. A very little more is all permitted to me. I cannot rest, I cannot stay, I cannot linger anywhere. My spirit never walked beyond our counting-house\textemdash mark me;\textemdash in life my spirit never roved beyond the narrow limits of our money-changing hole; and weary journeys lie before me!}
+
+ \begin{center}
+     \vfill%push the image down
+     \includegraphics[width=\columnwidth]{gs045b}
+    \captionof*{figure}{On the wings of the wind}
+ \end{center}
+\clearpage
+
 It was a habit with Scrooge, whenever he became thoughtful, to put his hands in his breeches pockets. Pondering on what the Ghost had said, he did so now, but without lifting up his eyes, or getting off his knees.
 
 \enquote{You must have been very slow about it, Jacob,} Scrooge observed in a business-like manner, though with humility and deference.
 
 \enquote{Slow!} the Ghost repeated.
-\newpage
+
 
 \enquote{Seven years dead,} mused Scrooge. \enquote{And travelling all the time?}
 
@@ -448,12 +458,7 @@ It was a habit with Scrooge, whenever he became thoughtful, to put his hands in 
 
 \enquote{You might have got over a great quantity of ground in seven years,} said Scrooge.
 
- \begin{center}
-     \vfill%push the image down
-     \includegraphics[width=\columnwidth]{gs045b}
-    \captionof*{figure}{On the wings of the wind}
- \end{center}
-\clearpage
+
 
 The Ghost, on hearing this, set up another cry, and clanked its chain so hideously in the dead silence of the night, that the Ward would have been justified in indicting it for a nuisance.
 
@@ -525,14 +530,14 @@ Whether these creatures faded into mist, or mist enshrouded them, he could not t
 Scrooge closed the window, and examined the door by which the Ghost had entered. It was double locked, as he had locked it with his own hands, and the bolts were undisturbed. He tried to say \enquote{Humbug!} but stopped at the first syllable. And being, from the emotions he had undergone, or the fatigues of the day, or his glimpse of the Invisible World, or the dull conversation of the Ghost, or the lateness of the hour, much in need of repose, went straight to bed without undressing, and fell asleep upon the instant.
 
 \begin{minipage}[c]{\linewidth}
-\includegraphics[width=\linewidth]{handsmoney}
+\includegraphics[width=.8\linewidth]{handsmoney}
 \end{minipage}
 
 
 \addchap[Stave II: The First of the Three Spirits]{Stave Two: The First of the Three Spirits}
 \begin{figure}[h]
 \centering
-\includegraphics[width=.5\linewidth]{gs012}
+\includegraphics[width=.8\linewidth]{gs012}
 \end{figure}
 
 \lettrine[loversize=.85]{W}{hen} Scrooge awoke it was so dark, that, looking out of bed, he could scarcely distinguish the transparent window from the opaque walls of his chamber. He was endeavouring to pierce the darkness with his ferret eyes, when the chimes of a neighbouring church struck the four quarters. So he listened for the hour.
@@ -875,7 +880,7 @@ The Spirit dropped beneath it, so that the extinguisher covered its whole form; 
 He was conscious of being exhausted, and overcome by an irresistible drowsiness; and, further, of being in his own bedroom. He gave the cap a parting squeeze, in which his hand relaxed; and had barely time to reel to bed, before he sank into a heavy sleep.
 
 \begin{minipage}[c]{\linewidth}
-\includegraphics[width=\linewidth]{gs090}
+\includegraphics[width=.8\linewidth]{gs090}
 \end{minipage}
 
 
@@ -979,7 +984,11 @@ And perhaps it was the pleasure the good Spirit had in showing off this power of
 
 
 
-Then up rose Mrs Cratchit, Cratchit's wife, dressed out but poorly in a twice-turned gown, but brave in ribbons, which are cheap, and make a goodly show for sixpence; and she laid the cloth, assisted by Belinda Cratchit, second of her daughters, also brave in ribbons; while Master Peter Cratchit plunged a fork into the saucepan of potatoes, and getting the corners of his monstrous shirt-collar (Bob's private property, conferred upon his son and heir in honour of the day,) into his mouth, rejoiced to find himself so gallantly attired, and yearned to show his linen in the fashionable Parks. And now two smaller Cratchits, boy and girl, came tearing in, screaming that outside the baker's they had smelt the goose, and known it for their own; and basking in luxurious thoughts of sage and onion, these young Cratchits danced about the table, and exalted Master Peter Cratchit to the skies, while he (not proud, although his collars nearly choked him) blew the fire, until the slow potatoes, bubbling up, knocked loudly at the saucepan-lid to be let out and peeled.
+Then up rose Mrs Cratchit, Cratchit's wife, dressed out but poorly in a twice-turned gown, but brave in ribbons, which are cheap, and make a goodly show for sixpence; and she laid the cloth, assisted by Belinda Cratchit, second of her daughters, also brave in ribbons; while Master Peter Cratchit plunged a fork into the saucepan of potatoes, and getting the corners of his monstrous shirt-collar (Bob's private property, conferred upon his son and heir in honour of the day,) into his mouth, rejoiced to find himself so gallantly attired, and yearned to show his linen in the fashionable Parks. 
+
+
+
+And now two smaller Cratchits, boy and girl, came tearing in, screaming that outside the baker's they had smelt the goose, and known it for their own; and basking in luxurious thoughts of sage and onion, these young Cratchits danced about the table, and exalted Master Peter Cratchit to the skies, while he (not proud, although his collars nearly choked him) blew the fire, until the slow potatoes, bubbling up, knocked loudly at the saucepan-lid to be let out and peeled.
 
 
 \enquote{What has ever got your precious father, then?} said Mrs Cratchit. \enquote{And your brother, Tiny Tim? And Martha warn't as late last Christmas Day by half an hour!}
@@ -990,15 +999,13 @@ Then up rose Mrs Cratchit, Cratchit's wife, dressed out but poorly in a twice-tu
 
 \enquote{Why, bless your heart alive, my dear, how late you are!} said Mrs Cratchit, kissing her a dozen times, and taking off her shawl and bonnet for her with officious zeal.
 
+
+
 \enquote{We'd a deal of work to finish up last night,} replied the girl, \enquote{and had to clear away this morning, mother!}
 
 
 
-\cleardoubleevenemptypage
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{gs109}
-\end{figure}
+
 
 \enquote{Well! never mind so long as you are come,} said Mrs Cratchit. \enquote{Sit ye down before the fire, my dear, and have a warm, Lord bless ye!}
 
@@ -1012,6 +1019,7 @@ So Martha hid herself, and in came little Bob, the father, with at least three f
 \enquote{Not coming,} said Mrs Cratchit.
 
 
+
 \enquote{Not coming!} said Bob, with a sudden declension in his high spirits; for he had been Tim's blood-horse all the way from church, and had come home rampant. \enquote{Not coming upon Christmas Day!}
 
 Martha didn't like to see him disappointed, if it were only in joke; so she came out prematurely from behind the closet door, and ran into his arms, while the two young Cratchits hustled Tiny Tim, and bore him off into the wash-house, that he might hear the pudding singing in the copper.
@@ -1019,23 +1027,33 @@ Martha didn't like to see him disappointed, if it were only in joke; so she came
 \enquote{And how did little Tim behave?} asked Mrs Cratchit when she had rallied Bob on his credulity, and Bob had hugged his daughter to his heart's content.
 
 
- \begin{center}
-     \vfill%push the image down
-     \includegraphics[width=\columnwidth]{gs109b}
-\captionof*{figure}{He had been Tim's blood-horse all the way from church}
- \end{center}
+
 
 
 
 
 \enquote{As good as gold,} said Bob, \enquote{and better. Somehow, he gets thoughtful, sitting by himself so much, and thinks the strangest things you ever heard. He told me, coming home, that he hoped the people saw him in the church, because he was a cripple, and it might be pleasant to them to remember upon Christmas Day who made lame beggars walk and blind men see.}
 
+
+
 Bob's voice was tremulous when he told them this, and trembled more when he said that Tiny Tim was growing strong and hearty.
+
+\cleardoubleevenemptypage
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{gs109}
+\end{figure}
 
 His active little crutch was heard upon the floor, and back came Tiny Tim before another word was spoken, escorted by his brother and sister to his stool beside the fire; and while Bob, turning up his cuffs\textemdash as if, poor fellow, they were capable of being made more shabby\textemdash compounded some hot mixture in a jug with gin and lemons, and stirred it round and round, and put it on the hob to simmer, Master Peter and the two ubiquitous young Cratchits went to fetch the goose, with which they soon returned in high procession.
 
 
 Such a bustle ensued that you might have thought a goose the rarest of all birds; a feathered phenomenon, to which a black swan was a matter of course\textemdash and, in truth, it was something very like it in that house. Mrs Cratchit made the gravy (ready beforehand in a little saucepan) hissing hot; Master Peter mashed the potatoes with incredible vigour; Miss Belinda sweetened up the apple sauce; Martha dusted the hot plates; Bob took Tiny Tim beside him in a tiny corner at the table; the two young Cratchits set chairs for everybody, not forgetting themselves, and, mounting guard upon their posts, crammed spoons into their mouths, lest they should shriek for goose before their turn came to be helped. At last the dishes were set on, and grace was said. It was succeeded by a breathless pause, as Mrs Cratchit, looking slowly all along the carving-knife, prepared to plunge it in the breast; but when she did, and when the long-expected gush of stuffing issued forth, one murmur of delight arose all round the board, and even Tiny Tim, excited by the two young Cratchits, beat on the table with the handle of his knife and feebly cried \enquote{Hurrah!}
+
+ \begin{center}
+     \vfill%push the image down
+     \includegraphics[width=\columnwidth]{gs109b}
+\captionof*{figure}{He had been Tim's blood-horse all the way from church}
+ \end{center}
 
 There never was such a goose. Bob said he didn't believe there ever was such a goose cooked. Its tenderness and flavour, size and cheapness, were the themes of universal admiration. Eked out by apple sauce and mashed potatoes, it was a sufficient dinner for the whole family; indeed, as Mrs Cratchit said with great delight (surveying one small atom of a bone upon the dish), they hadn't ate it all at last! Yet every one had had enough, and the youngest Cratchits, in particular, were steeped in sage and onion to the eyebrows! But now, the plates being changed by Miss Belinda, Mrs Cratchit left the room alone\textemdash too nervous to bear witnesses\textemdash to take the pudding up, and bring it in.
 
@@ -1232,8 +1250,10 @@ Scrooge looked about him for the Ghost, and saw it not. As the last stroke cease
 
 \begin{figure}[tbh]
 \centering
-\includegraphics[width=.5\linewidth]{gs056}
+\includegraphics[width=.4\linewidth]{gs056}
 \end{figure}
+
+\clearpage
 
 \addchap[Stave IV: The Last of the Spirits]{Stave Four: The Last of the Spirits}
 \begin{minipage}[c]{\linewidth}
@@ -1755,9 +1775,9 @@ He had no further intercourse with Spirits, but lived upon the Total-Abstinence 
 
 \begin{figure}[tbh]
 \centering
-\includegraphics[width=.5\linewidth]{gs182}
+\includegraphics[width=.4\linewidth]{gs182}
 \end{figure}
-
+\clearpage
 
 \KOMAoptions{headings=openleft}
 \chapter*{Colophon}
