@@ -1,26 +1,28 @@
 # christmascarolforbinders
-This is a XeLaTex rendering into PDF of the 1915 edition of Charles Dickens' _A Christmas Carol_, intended for use by DIY bookbinders. Project Gutenberg original is at https://www.gutenberg.org/cache/epub/24022/pg24022-images.html
+This is a LaTex rendering into PDF of the 1915 edition of Charles Dickens' _A Christmas Carol_, intended for use by DIY bookbinders. Project Gutenberg original is at https://www.gutenberg.org/cache/epub/24022/pg24022-images.html
 
 If you are using US letter size paper:
 * Download files
-  * lettersignature0duplex.pdf
-  * lettersignature1duplex.pdf
-  * lettersignature2duplex.pdf
-  * lettersignature3duplex.pdf
-  * lettersignature4duplex.pdf
-  * lettersignature5duplex.pdf
-  * lettersignature6duplex.pdf
+  * accletter.signature0.pdf
+  * accletter.signature1.pdf
+  * accletter.signature2.pdf
+  * accletter.signature3.pdf
+  * accletter.signature4.pdf
+  * accletter.signature5.pdf
+  * accletter.signature6.pdf
+  * accletter.signature7.pdf
 * Print out double-sided, flip on short side
 
 If you are using A4 size paper:
 * Download files
-  * a4signature0duplex.pdf
-  * a4signature1duplex.pdf
-  * a4signature2duplex.pdf
-  * a4signature3duplex.pdf
-  * a4signature4duplex.pdf
-  * a4signature5duplex.pdf
-  * a4signature6duplex.pdf
+  * acca4.signature0.pdf
+  * acca4.signature1.pdf
+  * acca4.signature2.pdf
+  * acca4.signature3.pdf
+  * acca4.signature4.pdf
+  * acca4.signature5.pdf
+  * acca4.signature6.pdf
+  * acca4.signature7.pdf
 * Print out double-sided, flip on short side
 
 
