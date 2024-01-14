@@ -5,7 +5,6 @@ All content (text and images) is in the public domain in the United States. Font
 
 If you are using US letter size paper:
 * Download files
-  * accletter.signature0.pdf
   * accletter.signature1.pdf
   * accletter.signature2.pdf
   * accletter.signature3.pdf
@@ -13,11 +12,12 @@ If you are using US letter size paper:
   * accletter.signature5.pdf
   * accletter.signature6.pdf
   * accletter.signature7.pdf
+  * accletter.signature8.pdf
+
 * Print out double-sided, flip on short side
 
 If you are using A4 size paper:
 * Download files
-  * acca4.signature0.pdf
   * acca4.signature1.pdf
   * acca4.signature2.pdf
   * acca4.signature3.pdf
@@ -25,6 +25,8 @@ If you are using A4 size paper:
   * acca4.signature5.pdf
   * acca4.signature6.pdf
   * acca4.signature7.pdf
+  * acca4.signature8.pdf
+
 * Print out double-sided, flip on short side
 
 
@@ -41,7 +43,7 @@ The TeX originals are included in the source directory as accletter.tex and acca
 * caption
 * csquotes
 * adjustbox
-* babel
+* polyglossia
 * ebgaramond
 
 Fonts used are:
