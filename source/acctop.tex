@@ -1,0 +1,245 @@
+\documentclass[
+%a5paper,
+paper=5.5in:8.5in,
+BCOR=7mm,
+twoside,
+DIV=calc,
+fontsize=12pt,
+usegeometry,
+dottedtocline,
+headers=normal,
+listof=numbered]{scrbook} % Document font size and paper size
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc} % International character encodings
+\usepackage{makeidx}
+\usepackage{lettrine}
+\usepackage{scrlayer-scrpage}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{csquotes}
+\usepackage[export]{adjustbox}
+\usepackage{polyglossia}
+\usepackage{afterpage}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[all]{nowidow}
+\usepackage{subfiles}
+\usepackage{floatpag}
+
+\MakeAutoQuote{»}{«}
+\catcode`\—=13
+\protected\def—{\allowbreak\textemdash\allowbreak}
+\newcommand\longdash{\mbox{---\,}\ignorespaces{}}
+
+\newcount\zzc
+\makeatletter
+\def\zz{%
+\ifnum\prevgraf<\c@L@lines
+\zzc\z@
+\loop
+\ifnum\zzc<\prevgraf
+\advance\zzc\@ne
+\afterassignment\zzda\count@\L@parshape\relax
+\repeat
+\parshape\L@parshape
+\fi}
+\def\zzda{\afterassignment\zzdb\dimen@}
+\def\zzdb{\afterassignment\zzdef\dimen@}
+\def\zzdef#1\relax{\edef\L@parshape{\the\numexpr\count@-1\relax\space #1}}
+\makeatother
+
+
+\setdefaultlanguage[variant=uk]{english}
+\newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
+\newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
+
+\newfontfamily\lettrinefont{acorninitials.ttf}
+\newfontfamily\headerfont{EB Garamond}
+\newfontfamily\chapheadfont{Menuetto.ttf}
+\newfontfamily\chapterfont{Menuetto.ttf}
+\renewcommand{\LettrineFontHook}{\fontspec{acorninitials.ttf}}
+%\renewcommand{\LettrineFontHook}{\color[red]{0.85}}
+
+\headsep=10pt
+\headheight=45pt
+\footskip=30pt
+
+\usepackage{ebgaramond} 
+%\usepackage{stix} % Alternative Stix font
+\defaultfontfeatures{Ligatures=TeX}
+\addtokomafont{part}{ebgaramond}
+\addtokomafont{partnumber}{ebgaramond}
+
+\newcommand*\hideentrynumber[1]{}
+
+\DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill]{chapter}{chapter}
+
+\DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-20pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
+\DeclareTOCStyleEntry[beforeskip=.1cm]{tocline}{part}
+\DeclareTOCStyleEntry[beforeskip=.1cm]{default}{subsection}
+
+\setkomafont{chapter}{\chapterfont\Huge\bfseries}
+\addtokomafont{disposition}{\normalfont}
+\automark{chapter}
+\lehead{A Christmas Carol}
+\rohead{\leftmark}
+\raggedbottom
+
+\floatpagestyle{empty}
+\setlist [itemize] {noitemsep} 
+
+%\caption*setup{font={ebgaramond,sc},labelformat=empty,labelsep=none]
+\captionsetup[figure]{font=sc,labelformat=empty}
+
+\graphicspath{ {./images/} }
+%\DeclareQuoteStyle[british]{english}
+
+
+\hyphenation{Crat-chit  Eb-en-ez-er}
+
+\begin{document}
+\frontmatter
+\renewcommand*{\sectionmarkformat}{}
+%\renewcommand*{\chapterpagestyle}{empty}
+
+\renewcommand*\raggedchapter{\centering}
+\KOMAoptions{headings=openright}
+\pagestyle{empty}
+\begin{figure}[p]
+\begin{minipage}[c]{\linewidth}
+\includegraphics[width=\linewidth]{newaccfront}
+\captionof{figure}[\textbf{Title Page}]{}
+\end{minipage}
+\end{figure}
+\thispagestyle{empty}
+
+\KOMAoptions{headings=openany}
+
+\pagestyle{plain}
+
+\tableofcontents
+\vfill
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{elfturkey}
+\caption[Tailpiece to Table of Contents]{}
+\end{figure}
+\clearpage
+
+\addchap{Characters}
+%\KOMAoptions{fontsize=12pt}
+\makeatletter
+\@ifclasswith{scrbook}{a5paper}
+{%
+
+}{%
+  \enlargethispage{\baselineskip}
+}
+\makeatother
+\begin{itemize}
+\item[\ding{100}] \textbf{Bob Cratchit}, clerk to Ebenezer Scrooge.
+\item[\ding{101}] \textbf{Peter Cratchit}, a son of the preceding.
+\item[\ding{102}] \textbf{Tim Cratchit (\enquote*{Tiny Tim})}, a cripple, youngest son of Bob Cratchit.
+\item[\ding{100}] \textbf{Mr Fezziwig}, a kind-hearted, jovial old merchant.
+\item[\ding{101}] \textbf{Fred}, Scrooge's nephew.
+\item[\ding{102}] \textbf{Ghost of Christmas Past}, a phantom showing things past.
+\item[\ding{100}] \textbf{Ghost of Christmas Present}, a spirit of a kind, generous, and hearty nature.
+\item[\ding{101}] \textbf{Ghost of Christmas Yet to Come}, an apparition showing the shadows of things which yet may happen.
+\item[\ding{102}] \textbf{Ghost of Jacob Marley}, a spectre of Scrooge's former partner in business.
+\item[\ding{100}] \textbf{Joe}, a marine-store dealer and receiver of stolen goods.
+\item[\ding{101}] \textbf{Ebenezer Scrooge}, a grasping, covetous old man, the surviving partner of the firm of Scrooge and Marley.
+\item[\ding{102}] \textbf{Mr Topper}, a bachelor.
+\item[\ding{100}] \textbf{Dick Wilkins}, a fellow apprentice of Scrooge's.
+\item[\ding{101}] \textbf{Belle}, a comely matron, an old sweetheart of Scrooge's.
+\item[\ding{102}] \textbf{Caroline}, wife of one of Scrooge's debtors.
+\item[\ding{100}] \textbf{Mrs Cratchit}, wife of Bob Cratchit.
+\item[\ding{101}] \textbf{Belinda and Martha Cratchit}, daughters of the preceding.
+\item[\ding{102}] \textbf{Mrs Dilber}, a laundress.
+\item[\ding{100}] \textbf{Fan}, the sister of Scrooge.
+\item[\ding{101}] \textbf{Mrs Fezziwig}, the worthy partner of Mr Fezziwig.
+\end{itemize}
+
+
+\clearpage
+
+\renewcommand{\listfigurename}{List of Illustrations}
+\listoffigures
+\vfill
+\begin{figure}[h]
+\centering
+\includegraphics[width=.9\textwidth]{doublelf}
+\caption[Tailpiece to List of Illustrations]{}
+\end{figure}
+\clearpage
+
+%\unsettoc{lof}{chapteratlist}
+%\DeclareNewTOC[options ]{extension }
+%\renewcommand{\listfigurename}{List of Illustrations}
+%\listoffigures
+%\clearpage
+
+\pagestyle{headings}
+%\renewcommand*{\chapterpagestyle}{plain}
+\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
+
+\addchap{Preface}
+\lettrine[lines=4]{I}{} have endeavoured in this Ghostly little book to raise the Ghost of an Idea which shall not put my readers out of humour with themselves, with each other, with the season, or with me. May it haunt their house pleasantly, and no one wish to lay it.
+
+~\\
+
+Their faithful Friend and Servant,
+
+\begin{flushright}
+\textsc{C.D.}
+\end{flushright}
+
+\textit{December, 1843.}
+\vfill
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\textwidth]{gs007}
+\caption[Tailpiece to Preface]{}
+\end{figure}
+
+\renewcommand*{\chaptermarkformat}{}
+\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
+\renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
+
+
+
+\mainmatter
+\flushbottom
+\KOMAoptions{headings=openright}
+%\KOMAoptions{fontsize=12.5pt}
+%\vspace*{-2.5cm}
+
+\include{chapters/1.tex}
+\include{chapters/2.tex}
+\include{chapters/3.tex}
+\include{chapters/4.tex}
+\include{chapters/5.tex}
+
+%\cleardoublepage
+\KOMAoptions{headings=openleft}
+\chapter*{Colophon}
+
+\centering
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-16\textsuperscript{th} century. This digital version reproduces the original design by Claude Garamont closely: the source for the letterforms is a scan of a specimen known as the “Berner specimen,” which was composed in 1592 by Conrad Berner, the son-in-law of Christian Egenolff and his successor at the Egenolff print office.\\github.com/georgd/EB-Garamond
+\vfill
+\includegraphics[width=.5\textwidth]{bells}
+\vfill
+Chapter dropcaps are set in Dieter Steffmann's Acorn Initialen; chapter headings are set in Dieter Steffman's Menuetto.\\steffmann.de\\steffmann.1001fonts.com
+\vfill
+\includegraphics[width=.5\textwidth]{bells}
+\vfill
+Text and illustrations are taken from Project Gutenberg's scan of the original 1915 edition (www.gutenberg.org/ebooks/24022) of Arthur Rackham's illustrated version of \textit{A Christmas Carol}, published by J. B. Lippincott Company. Additional illustrations are taken from the 1915 edition of Arthur Rackham's illustrated version of \textit{The Night Before Christmas}.
+\vfill
+\includegraphics[width=.5\textwidth]{bells}
+\vfill
+Typeset in \LaTeX{}.
+\thispagestyle{empty}
+\end{document}
