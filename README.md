@@ -1,5 +1,5 @@
 # christmascarolforbinders
-This is a LaTeX rendering into PDF of the 1915 edition of Charles Dickens' _A Christmas Carol_, intended for use by DIY bookbinders. Project Gutenberg original is at https://www.gutenberg.org/cache/epub/24022/pg24022-images.html
+This is a free PDF typeset of the 1915 edition of Charles Dickens' _A Christmas Carol_, intended for use by DIY bookbinders. Project Gutenberg original is at https://www.gutenberg.org/cache/epub/24022/pg24022-images.html
 
 All content (text and images) is in the public domain in the United States. Fonts used, to the best of my knowledge, are free to use for any purpose including commercial. Whatever original work of mine this effort represents, I place into the public domain. In other words, to the best of my knowledge you *may* make and sell copies of this. I am not a lawyer and you are responsible for compliance with your government's copyright law(s).
 
@@ -9,8 +9,4 @@ If you are using US letter paper (8.5" x 11"), download the "letter" folder cont
 
 If you are using A4, download the "a4" folder containing the signatures and print them out, double-sided, flip on short side.
 
-
-Fonts used are:
-* EB Garamond: https://www.1001freefonts.com/eb-garamond.font
-* Menuetto https://www.1001freefonts.com/menuetto.font
-* Acorn Initials https://www.1001freefonts.com/acorn.font
+LaTeX originals are in the source folder.
