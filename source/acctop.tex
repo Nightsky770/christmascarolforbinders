@@ -8,7 +8,10 @@ fontsize=12pt,
 usegeometry,
 dottedtocline,
 headers=normal,
-listof=numbered]{scrbook} % Document font size and paper size
+listof=numbered,
+listof=totoc,
+listof=flat,
+listof=nochaptergap]{scrbook} % Document font size and paper size
 
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -54,6 +57,7 @@ listof=numbered]{scrbook} % Document font size and paper size
 
 
 \setdefaultlanguage[variant=uk]{english}
+%\setmainfont{EB Garamond}[UprightFeatures={CharacterVariant=11}]
 \newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
 \newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
 
@@ -223,7 +227,7 @@ Their faithful Friend and Servant,
 \include{chapters/4.tex}
 \include{chapters/5.tex}
 
-%\cleardoublepage
+\cleardoublepage
 \KOMAoptions{headings=openleft}
 \chapter*{Colophon}
 
