@@ -1,5 +1,5 @@
 # christmascarolforbinders
-This is a free PDF typeset of the 1915 edition of Charles Dickens' _A Christmas Carol_, intended for use by DIY bookbinders. Project Gutenberg original is at https://www.gutenberg.org/cache/epub/24022/pg24022-images.html
+This is a free PDF typeset of the 1915 edition of Charles Dickens' _A Christmas Carol_. It is illustrated by Arthur Rackham, one of the premier illustrators of his day, in color and black and white. I have added additional illustrations from Rackham's 1915 edition of "The Night Before Christmas".
 
 All content (text and images) is in the public domain in the United States. Fonts used, to the best of my knowledge, are free to use for any purpose including commercial. Whatever original work of mine this effort represents, I place into the public domain. In other words, to the best of my knowledge you *may* make and sell copies of this. I am not a lawyer and you are responsible for compliance with your government's copyright law(s).
 
