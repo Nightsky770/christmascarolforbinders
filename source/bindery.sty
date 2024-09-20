@@ -30,12 +30,14 @@
 \KOMAoption{numbers}{noenddot}
 \KOMAoption{listof}{flat,nochaptergap}
 
+\renewcommand\raggedsection{\centering} %always center chapter heads
 
+\graphicspath{ {./images/} }
 
 \MakeAutoQuote{»}{«}
 \catcode`\—=13
 \protected\def—{\textemdash}
-\newcommand\longdash{\mbox{---\,}\ignorespaces{}}
+\newcommand\longdash{\mbox{---\,}\ignorespaces{}} %corrects issue with lines breaking between dash and end quote
 
 \newcommand{\HUGE}{\fontsize{30}{40}\selectfont}
 

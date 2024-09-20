@@ -1,4 +1,15 @@
-\usepackage{lettrine}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dropcaps}
+
+
+\RequirePackage{lettrine}
+\RequirePackage{xparse}
+
+
+\NewDocumentCommand{\setdropcaps}{m}
+{
+	\renewcommand{\LettrineFontHook}{\fontspec{#1}}
+}
 
 \makeatletter
 \newcount\zzc

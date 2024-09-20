@@ -3,29 +3,22 @@ a5paper,
 %paper=5.5in:8.5in,
 ]{scrbook} % Document font size and paper size
 
-
-
 \usepackage{bindery}
 \usepackage{dropcaps}
 \usepackage{illustrations}
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep} 
 
-
-\newfontfamily\lettrinefont{acorninitials.ttf}
-\newfontfamily\headerfont{EB Garamond}
-\newfontfamily\chapheadfont{Menuetto.ttf}
 \newfontfamily\chapterfont{Menuetto.ttf}
-\renewcommand{\LettrineFontHook}{\fontspec{acorninitials.ttf}}
+\setdropcaps{acorninitials.ttf}
 
-%\KOMAoption{fontsize}{12pt} %override default 11pt
+
 \KOMAoption{listof}{totoc} %we're listing the list o' illustrations in the contents
 
 \DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill]{chapter}{chapter}
 
 \DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-20pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
-%\DeclareTOCStyleEntry[beforeskip=.1cm]{tocline}{part}
-%\DeclareTOCStyleEntry[beforeskip=.1cm]{default}{subsection}
+
 
 \setkomafont{chapter}{\chapterfont\Huge\bfseries}
 
@@ -41,7 +34,7 @@ a5paper,
 \renewcommand*{\sectionmarkformat}{}
 %\renewcommand*{\chapterpagestyle}{empty}
 
-\renewcommand*\raggedchapter{\centering}
+
 \KOMAoptions{headings=openright}
 \includepdf[width=1.2\textwidth]{newaccfront.png}
 \thispagestyle{empty}
@@ -75,7 +68,7 @@ a5paper,
 \include{chapters/characters.tex}
 
 \pagestyle{headings}
-%\renewcommand*{\chapterpagestyle}{plain}
+
 \newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
 
 
@@ -101,21 +94,30 @@ a5paper,
 \cleardoublepage
 \KOMAoptions{headings=openleft}
 \chapter*{Colophon}
-
+\vfill
 \centering
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. This digital version reproduces the original design by Claude Garamont closely: the source for the letterforms is a scan of a specimen known as the »Berner specimen,« which was composed in 1592 by Conrad Berner, the son-in-law of Christian Egenolff and his successor at the Egenolff print office.\\github.com/georgd/EB-Garamond
+\begin{minipage}{\textwidth}
+\textit{A Christmas Carol} was first published in 1843 by Chapman \& Hall in London (UK). Illustrations by Arthur Rackham (1867\textendash1939) are taken from a version published in 1915 by J. B. Lippincott Company in Philadelphia (USA). Additional illustrations are from Rackham's illustrated version of Clement C. Moore's \textit{The Night Before Christmas}, published in 1915 by J. B. Lippincott Company in Philadelphia.
+\end{minipage}
+\vfill
+gutenberg.org/ebooks/24022
 \vfill
 \includegraphics[width=.4\textwidth]{bells}
 \vfill
-Chapter dropcaps are set in Dieter Steffmann's Acorn Initialen; chapter headings are set in Dieter Steffman's Menuetto.\\steffmann.1001fonts.com
+\begin{minipage}{\textwidth}
+EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's »Acorn Initialen«; chapter headings are set in Dieter Steffman's »Menuetto«.
+\end{minipage}
+\vfill
+github.com/georgd/EB-Garamond
+\\steffmann.1001fonts.com
 \vfill
 \includegraphics[width=.4\textwidth]{bells}
 \vfill
-\textit{A Christmas Carol} was first published in 1843 by Chapman \& Hall in London (UK). Illustrations by Arthur Rackham (1867\textendash1939) are taken from a version published in 1915 by J. B. Lippincott Company in Philadelphia (USA). Additional illustrations are from Rackham's illustrated version of Clement C. Moore's \textit{The Night Before Christmas}, published in 1915 by J. B. Lippincott Company in Philadelphia.\\www.gutenberg.org/ebooks/24022
+\begin{minipage}{\textwidth}
+This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed.
+\end{minipage}
 \vfill
-\includegraphics[width=.4\textwidth]{bells}
-\vfill
-This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed: creativecommons.org/publicdomain/zero/1.0/
+creativecommons.org/publicdomain/zero/1.0/
 \vfill
 \includegraphics[width=.4\textwidth]{bells}
 \vfill
