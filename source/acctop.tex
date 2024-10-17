@@ -1,15 +1,16 @@
 \documentclass[
-a5paper,
-%paper=5.5in:8.5in,
+%a5paper,
+paper=5.5in:8.5in,
 ]{scrbook} % Document font size and paper size
 
 \usepackage{bindery}
 \usepackage{dropcaps}
 \usepackage{illustrations}
+
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep} 
 
-\newfontfamily\chapterfont{Menuetto.ttf}
+\setfontfamily\chapterfont{Menuetto.ttf}
 \setdropcaps{acorninitials.ttf}
 
 
@@ -19,6 +20,15 @@ a5paper,
 
 \DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-20pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
 
+\begin{letter}
+	\def\bigpicsize{1.15}
+	\def\smallpicsize{1.15}
+\end{letter}
+
+\begin{a4}
+	\def\bigpicsize{1.1}
+	\def\smallpicsize{1.0}
+\end{a4}
 
 \setkomafont{chapter}{\chapterfont\Huge\bfseries}
 
@@ -36,7 +46,7 @@ a5paper,
 
 
 \KOMAoptions{headings=openright}
-\includepdf[width=1.2\textwidth]{newaccfront.png}
+\includepdf[width=1.2\textwidth]{titlepage.jpg}
 \thispagestyle{empty}
 
 \KOMAoptions{headings=openany}
@@ -97,21 +107,21 @@ a5paper,
 \vfill
 \centering
 \begin{minipage}{\textwidth}
-\textit{A Christmas Carol} was first published in 1843 by Chapman \& Hall in London (UK). Illustrations by Arthur Rackham (1867\textendash1939) are taken from a version published in 1915 by J. B. Lippincott Company in Philadelphia (USA). Additional illustrations are from Rackham's illustrated version of Clement C. Moore's \textit{The Night Before Christmas}, published in 1915 by J. B. Lippincott Company in Philadelphia.
+\textit{A Christmas Carol} was first published in 1843 by Chapman \& Hall in London (UK). Illustrations by Arthur Rackham (1867\textendash1939) are taken from a version published in 1915 by J.~B. Lippincott Company in Philadelphia (USA). Additional illustrations are from Rackham's illustrated version of Clement C. Moore's \textit{The Night Before Christmas}, published in 1915 by J. B. Lippincott Company in Philadelphia.
 \end{minipage}
 \vfill
 gutenberg.org/ebooks/24022
 \vfill
-\includegraphics[width=.4\textwidth]{bells}
+\includegraphics[width=.5\textwidth]{bells}
 \vfill
 \begin{minipage}{\textwidth}
-EB Garamond is Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's »Acorn Initialen«; chapter headings are set in Dieter Steffman's »Menuetto«.
+Text is set in »EB Garamond,« Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's »Acorn Initialen«; chapter headings are set in Dieter Steffman's »Menuetto«.
 \end{minipage}
 \vfill
 github.com/georgd/EB-Garamond
 \\steffmann.1001fonts.com
 \vfill
-\includegraphics[width=.4\textwidth]{bells}
+\includegraphics[width=.5\textwidth]{bells}
 \vfill
 \begin{minipage}{\textwidth}
 This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed.
@@ -119,7 +129,7 @@ This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 
 \vfill
 creativecommons.org/publicdomain/zero/1.0/
 \vfill
-\includegraphics[width=.4\textwidth]{bells}
+\includegraphics[width=.5\textwidth]{bells}
 \vfill
 Typeset in \LaTeX{}. Last revised \today.
 \thispagestyle{empty}
