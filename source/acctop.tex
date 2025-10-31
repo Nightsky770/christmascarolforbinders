@@ -3,7 +3,8 @@ a5paper,
 %paper=5.5in:8.5in,
 ]{scrbook} % Document font size and paper size
 
-\usepackage{bindery}
+\title{A Christmas Carol}
+\usepackage[namedChapters]{bindery}
 \usepackage{dropcaps}
 \usepackage{illustrations}
 
@@ -14,39 +15,25 @@ a5paper,
 \setdropcaps{acorninitials.ttf}
 
 
-\KOMAoption{listof}{totoc} %we're listing the list o' illustrations in the contents
+\DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill, dynnumwidth=true]{chapter}{chapter}
 
-\DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill]{chapter}{chapter}
-
-\DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-20pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
-
-\begin{letter}
-	\def\bigpicsize{1.15}
-	\def\smallpicsize{1.15}
-\end{letter}
-
-\begin{a4}
-	\def\bigpicsize{1.1}
-	\def\smallpicsize{1.0}
-\end{a4}
-
-\setkomafont{chapter}{\chapterfont\Huge\bfseries}
-
-\automark{chapter}
-\lehead{A Christmas Carol}
-\rohead{\leftmark}
-
+\DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-10pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
 
 \hyphenation{Crat-chit  Eb-en-ez-er}
 
 \begin{document}
+
+\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
+
+
+
 \frontmatter
 \renewcommand*{\sectionmarkformat}{}
-%\renewcommand*{\chapterpagestyle}{empty}
+
 
 
 \KOMAoptions{headings=openright}
-\includepdf[width=1.2\textwidth]{titlepage.jpg}
+\includepdf[width=\basicwidth]{titlepage.jpg}
 \thispagestyle{empty}
 
 \KOMAoptions{headings=openany}
@@ -62,9 +49,9 @@ a5paper,
 \includegraphics[width=0.7\textwidth]{elfturkey}
 \caption[Tailpiece to Table of Contents]{}
 \end{figure}
-\clearpage
+%\clearpage
 
-
+\KOMAoptions{headings=openleft}
 \renewcommand{\listfigurename}{List of Illustrations}
 \listoffigures
 \vfill
@@ -79,9 +66,42 @@ a5paper,
 
 \pagestyle{headings}
 
-\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
+
+%Some specific customizations for Christmas Carol
+
+%store the defaults; we'll need them later
+\makeatletter
+\let\saved@chapterfont\scr@fnt@chapter
+\let\saved@chapterprefixfont\scr@fnt@chapterprefix
+\makeatother
 
 
+% Make sure chapter prefix is shown
+\KOMAoption{chapterprefix}{true}
+
+% Customize the chapter prefix format
+\renewcommand*{\chapterformat}{\chaptername~\thechapter}
+
+
+% Update the chapter mark format to use "Stave" 
+\renewcommand{\chaptername}{Stave}
+\renewcommand{\thechapter}{\spelled{chapter}}
+
+%embiggen chapter name (`Stave One') relative to chapter title (`Marley's Ghost')
+\setkomafont{chapterprefix}{\chapterfont\moderatelyhuge}
+
+%mark header with roman numeral version of chapter number
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\chaptername\ \Roman{chapter}:\ #1}{}%
+}
+
+ %Tell ToC to list a chapter by its Roman numeral name, not the spelled-out version
+\renewcommand*{\addchaptertocentry}[2]{%
+  \addtocentrydefault{chapter}{}{\chaptername\ \Roman{chapter}: #2}%
+}
+
+
+%end of Christmas Carol customizations
 
 \renewcommand*{\chaptermarkformat}{}
 \renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
@@ -92,14 +112,20 @@ a5paper,
 \mainmatter
 \flushbottom
 \KOMAoptions{headings=openright}
-%\KOMAoptions{fontsize=12.5pt}
-%\vspace*{-2.5cm}
+
 
 \include{chapters/1.tex}
 \include{chapters/2.tex}
 \include{chapters/3.tex}
 \include{chapters/4.tex}
 \include{chapters/5.tex}
+
+
+%reset defaults
+\makeatletter
+\let\scr@fnt@chapter\saved@chapterfont
+\let\scr@fnt@chapterprefix\saved@chapterprefixfont
+\makeatother
 
 \cleardoublepage
 \KOMAoptions{headings=openleft}
@@ -115,7 +141,7 @@ gutenberg.org/ebooks/24022
 \includegraphics[width=.5\textwidth]{bells}
 \vfill
 \begin{minipage}{\textwidth}
-Text is set in »EB Garamond,« Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's »Acorn Initialen«; chapter headings are set in Dieter Steffman's »Menuetto«.
+Text is set in <EB Garamond,> Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's <Acorn Initialen>; chapter headings are set in Dieter Steffman's <Menuetto>.
 \end{minipage}
 \vfill
 github.com/georgd/EB-Garamond
