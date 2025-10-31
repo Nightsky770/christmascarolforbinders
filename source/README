@@ -1,4 +1,6 @@
-.sty files go in whatever directory you're running LaTeX in, or in a central folder LaTeX knows about. If you already have one or more of the .sty files from one of my other typesets, you don't need a second copy.
+.sty files go in whatever directory you're running LaTeX in, or in a central folder LaTeX knows about.
+
+I've placed a cleaned up scan of Rackham's drawing for the endpapers in images (images/endpaper.jpg), in case it's useful to someone.
 
 Fonts used are:
 * EB Garamond: https://www.1001freefonts.com/eb-garamond.font
