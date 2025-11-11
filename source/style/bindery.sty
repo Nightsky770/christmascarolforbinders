@@ -25,7 +25,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{needspace}
 \RequirePackage[shortcuts]{extdash} %Allows for auto-breaks at hyphens: Lud\-/in\-/the\-/Mist
-
+\RequirePackage{ulem} %provides strikeout command \sout
 
 \KOMAoption{BCOR}{7mm}
 \KOMAoption{twoside}{true}
@@ -104,8 +104,10 @@
     ItalicFont=*-Italic,
     BoldFont=*-Bold,
     Numbers=Lining,
+	SmallCapsFeatures = {Numbers = Lining},
     UprightFeatures={CharacterVariant=11}
 ]
+
 
 \newfontfamily\chapterfont{EBGaramond}[
     Extension=.otf,
