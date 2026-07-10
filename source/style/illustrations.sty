@@ -10,6 +10,7 @@
 \RequirePackage{environ}
 \RequirePackage{xparse}
 \RequirePackage{tikz}
+\RequirePackage{changepage}
 
 \usetikzlibrary{positioning,calc}
 
@@ -149,3 +150,25 @@
 
 % \imagelof{illustrations}{List of Illustrations} %As above, assumes there will be a file called "illustrations.jpg" or something
 % \listoffigures
+
+
+%%%%%%%%%%%%%%%%% Frame pages %%%%%%%%%%%%%%
+
+\NewDocumentEnvironment{framepage}{m}{
+  \pagestyle{empty}%
+  \begin{adjustwidth}{1.5cm}{1.5cm}%
+  \let\clearpage\relax
+  \begin{tikzpicture}[remember picture, overlay]  
+
+\node (pic) at ($(current page.center)$) {\includegraphics[width=1.2\textwidth]{#1}};
+
+\end{tikzpicture}
+% \vspace*{3cm}
+  % \end{adjustwidth}%
+  % \clearpage%
+\begin{minipage}{0.5\textwidth}[c]
+	\centering
+}
+  {%
+\end{minipage}
+}

@@ -8,6 +8,23 @@
 
 \setcounter{DefaultLines}{4}
 
+%Should you need to change other lettrine values, they are:
+% \setcounter{DefaultLines}{2}
+% \setcounter{DefaultDepth}{0}
+% \renewcommand{\DefaultLoversize}{0}
+% \renewcommand{\DefaultLraise}{0}
+% \renewcommand{\DefaultLhang}{0}
+% \setlength{\DefaultFindent}{0pt}
+% \setlength{\DefaultNindent}{0.5em}
+% \setlength{\DefaultSlope}{0pt}
+% \setlength{\DiscardVskip}{1pt}
+% \LettrineImagefalse
+% \LettrineOnGridfalse
+% \LettrineMoveAtEOPfalse
+% \LettrineRealHeightfalse
+% (Default values given. Just change them to whatever you need.)
+
+
 \NewDocumentCommand{\setdropcaps}{m}
 {
 	\renewcommand{\LettrineFontHook}{\fontspec{#1}}
@@ -16,7 +33,7 @@
 
 %%%%%%%%%%%%%%%% Accented character support %%%%%%%%%%%%%%%%%%
 % Supports acute accent, grave accent, circumflex accent.
-% Usage: \lettrine{\accentletter[\gravebox]{A}}{} produces a capital A dropcap with a grave accent (in whatever the default font is--EB Garamond for me, ususally) hovering over it like a hat. \primebox or \circbox in place of \gravebox would instead produce an acute or circumflex accent, respectively.
+% Usage: \lettrine{\accentletter[\gravebox]{A}}{} produces a capital A dropcap with a grave accent (in whatever the default font is--usually EB Garamond for me) hovering over it like a hat. \primebox or \circbox in place of \gravebox would instead produce an acute or circumflex accent, respectively.
 \newsavebox\gravebox
 \savebox\gravebox{\smash{\scalebox{3}[1]{$\grave{ }$}}}
 \newsavebox\primebox
@@ -31,14 +48,17 @@
 %%%%%%%%%%%%%%%%% end of accented character support %%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%% This is dark magic that I found on the internet and do not 100% understand, and therefore can't improve upon. If you are using dropcaps and the first paragraph of your chapter is very short and doesn't fill up the text space to the right of the dropcap, Lettrine will indent the next paragraph relative to the regular left text margin--usually overlapping the dropcap and rendering it illegible. To correct this, precede each short paragraph with a \zz:
-%\lettrine{I}{} thought about it.
+%%%%%%%%%%%% This is dark magic that I found on the internet and do not 100% understand, and therefore can't improve upon. If you are using dropcaps and the first paragraph of your chapter is very short and doesn't fill up the text space to the right of the dropcap, lettrine will indent the next paragraph relative to the regular left text margin--usually overlapping the dropcap and rendering it illegible. To correct this, precede each short paragraph with a \zz:
+%\lettrine{I}{} considered it.
 %
 %\zz
-%<Baloney,> I said.
+%<No,> I said.
 %
 %\zz
 %<What?!> he replied.
+%
+%\zz
+%<No,> I reiterated.
 % There is no benefit to having superfluous \zz'd paragraphs, so just do the ones you need.
 
 \makeatletter

@@ -1,3 +1,6 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bindery}
+
 \RequirePackage{xcolor}
 \RequirePackage[verbose]{polyglossia}
 \RequirePackage{fontspec}
@@ -24,8 +27,13 @@
 \RequirePackage{soul}
 \RequirePackage{enumitem}
 \RequirePackage{needspace}
-\RequirePackage[shortcuts]{extdash} %Allows for auto-breaks at hyphens: Lud\-/in\-/the\-/Mist
-\RequirePackage{ulem} %provides strikeout command \sout
+\RequirePackage[shortcuts]{extdash} 
+	%Allows for auto-breaks at hyphens: Lud\-/in\-/the\-/Mist
+\RequirePackage[normalem]{ulem}
+	%provides strikeout command \sout
+	%normalem option stops ulem from comandeering \emph
+\RequirePackage{xspace}
+	%needed for the acronym command
 
 \KOMAoption{BCOR}{7mm}
 \KOMAoption{twoside}{true}
@@ -51,7 +59,6 @@
 \ProcessOptions\relax
 
 % Now do the paper size selection and other @ code
-\makeatletter
 %%%%%%%%% First let us choose our paper size %%%%%%%%%
 \newif\ifafour
 \newif\ifletter
@@ -93,9 +100,10 @@
 }
 %%%%%%% thing done %%%%%%%%%%%%%%%
 
+
+
+
 %font setup
-
-
 \newcommand{\HUGE}{\fontsize{30}{30}\selectfont}
 
 \setmainfont{EBGaramond}[
@@ -104,7 +112,6 @@
     ItalicFont=*-Italic,
     BoldFont=*-Bold,
     Numbers=Lining,
-	SmallCapsFeatures = {Numbers = Lining},
     UprightFeatures={CharacterVariant=11}
 ]
 
@@ -118,6 +125,13 @@
     UprightFeatures={CharacterVariant=11}
 ]%Makes a good default. If needed, override in document with \renewfontfamily\chapterfont{whatever}
 
+\newfontfamily\oldfont{IMFell}[
+	Scale=MatchUppercase,
+    UprightFont=FePIrm27C.otf,
+    ItalicFont=FePIit27C.otf,
+    SmallCapsFont=IMFellEnglishSC-Regular.ttf,
+    SmallCapsFeatures={Letters=SmallCaps},
+]
 
 %in case we need a sans font; Gillius is nice
 \setsansfont[
@@ -133,11 +147,11 @@ ItalicFont = *-Italic.otf
 
 \defaultfontfeatures{Ligatures=TeX}
 
+\DeclareEmphSequence{\itshape,\upshape}
 
 
 %Misc setup
 
-\setdefaultlanguage[variant=uk]{english} %most of the texts I do are British, so it makes sense to have this as a default. Override in document with \setdefaultlanguage[variant=us]{english} or whatever.
 
 \newcommand*\hideentrynumber[1]{}
 
@@ -160,13 +174,13 @@ ItalicFont = *-Italic.otf
 
 % Nice portable scene divider, auto-centered and with a bit of vertical space
 \newcommand{\divider}{%
-  \par\vspace{0.5em plus 1em minus 0.25em}%
+  \goodbreak\par\vspace{0.5em plus 1em minus 0.25em}%
   \noindent\hfil\rule{0.5\textwidth}{.4pt}\hfil%
-  \par\vspace{0.5em plus 1em minus 0.25em}%
+  \par\vspace{0.5em plus 1em minus 0.25em}\goodbreak%
 }
 
 
-
+%make bottoms of pages line up. Opposite is \raggedbottom .
 \flushbottom
 
 % Why are epigraph's defaults so hideous?
@@ -309,6 +323,45 @@ ItalicFont = *-Italic.otf
 
 %%%% Other stuffs %%%%%%%%%%%
 
+
+%customize italics by marking their function
+\newcommand{\shipname}[1]{\emph{#1}} %use emph instead of textit so that a ship name in a chapter name is formatted correctly in chapter heads
+\newcommand{\workname}[1]{\emph{#1}} %use emph instead of textit so that a book name in a chapter name is formatted correctly in chapter heads
+\newcommand{\buildingname}[1]{\enquote{#1}} %to consistently set names of inns/pubs/etc. across multiple texts
+\newcommand{\foreign}[1]{\textit{#1}} %does not do language-aware hyphenation
+\newcommand{\swear}[1]{\textit{#1}}
+\newcommand{\soundfx}[1]{\textit{#1}}
+\newcommand{\thoughts}[1]{\textit{#1}}
+\newcommand{\binderyquote}[1]{\textit{#1}}
+\setdefaultlanguage[variant=uk]{english} %most of the texts I do are British, so it makes sense to have this as a default. Override in document with \setdefaultlanguage[variant=us]{english} or whatever.
+
+\setotherlanguages{french,latin}
+\newcommand{\binderyfrench}[1]{\textit{\textfrench{#1}}}
+\newcommand{\binderylatin}[1]{\textit{\textlatin{#1}}}
+% \newcommand{\binderyspanish}[1]{\textit{\textspanish{#1}}}
+% \newcommand{\binderyitalian}[1]{\textit{\textitalian{#1}}}
+
+
+\ExplSyntaxOn
+%autoformat royal names for less confusion between Roman 1 and capital letter i
+\NewDocumentCommand{\regnal}{m}
+  {
+    \seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 }
+    \seq_pop_right:NN \l_tmpa_seq \l_tmpb_tl
+    \seq_use:Nn \l_tmpa_seq { ~ }
+    \nobreakspace{}\textsc{\MakeLowercase{\tl_use:N \l_tmpb_tl}}
+  }
+
+%autoformat acronyms for consistency
+\NewDocumentCommand{\acronym}{m}
+  {
+    \mbox{\textsc{
+      \str_map_inline:nn { #1 }
+        { \MakeLowercase{##1}. }
+    }}\@ifnextchar{.}{\@gobble}{\xspace}
+  }
+\ExplSyntaxOff
+
 %spell out chapter numbers, or use ordinal numbers: Chapter One, or Chapter the First. (obvs for this latter you'll also need to redefine \chapterformat to "Chapter~the~\thechapter".) I've only gone through "ten"; there is probably a more elegant way to do this if you need to go higher.
 % Usage: \renewcommand{\thechapter}{\spelled{chapter}} or  \renewcommand{\thechapter}{\ordinal{chapter}}
 
@@ -322,7 +375,7 @@ ItalicFont = *-Italic.otf
 }
 
 \newcommand*{\ordinal}[1]{%
-  \expandafter\@ordinals\csname c@#1\endcsname
+  \expandafter\@ordinal\csname c@#1\endcsname
 }
 \newcommand*{\@ordinal}[1]{%
   \ifcase#1\or{First}\or{Second}\or{Third}\or{Fourth}\or{Fifth}\or{Sixth}\or{Seventh}\or{Eighth}\or{Ninth}\or{Tenth}
@@ -333,25 +386,48 @@ ItalicFont = *-Italic.otf
 % \oldmoney{1}{7}{9} -> £1 7s. 9d. (with "s." and "d." italicized)
 % You can leave any of the three arguments blank. The command will assume the blank value is zero and silently suppress it:
 % \oldmoney{60}{}{1} -> £60 1d.
-% \oldmoney{}{3}{1} -> 3s. 1d. 
+% \oldmoney{}{3}{1} -> 3s. 1d.
+
+\newcommand{\@oldmoneynorm}[1]{\if\relax\detokenize{#1}\relax0\else#1\fi}
+
+\newcommand{\@oldmoneyperiod}{.\@ifnextchar{.}{\@gobble}{}}
+
+\newcommand{\afterfi}[1]{\fi#1}
 
 \newcommand{\oldmoney}[3]{%
-  \ifnum#1>0
-    {\pounds}#1%
-    \ifnum#2>0\,#2\textit{s}.\fi
-    \ifnum#3>0\,#3\textit{d}.\fi
-  \else
-    \ifnum#2>0
-      #2\textit{s}.%
-      \ifnum#3>0\,#3\textit{d}.\fi
+  \def\@i{\@oldmoneynorm{#1}}%
+  \def\@ii{\@oldmoneynorm{#2}}%
+  \def\@iii{\@oldmoneynorm{#3}}%
+  \def\@oldmoneyresult{}%
+  \ifnum\@i>0
+    \def\@oldmoneyresult{{\pounds}\@i}%
+    \ifnum\@ii>0
+      \expandafter\def\expandafter\@oldmoneyresult\expandafter
+        {\@oldmoneyresult\,\@ii\textit{s}.}%
+      \ifnum\@iii>0
+        \expandafter\def\expandafter\@oldmoneyresult\expandafter
+          {\@oldmoneyresult\,\@iii\textit{d}}%
+      \fi
     \else
-      \ifnum#3>0
-        #3\textit{d}.%
-      \else
-        %
+      \ifnum\@iii>0
+        \expandafter\def\expandafter\@oldmoneyresult\expandafter
+          {\@oldmoneyresult\,\@iii\textit{d}}%
+      \fi
+    \fi
+  \else
+    \ifnum\@ii>0
+      \def\@oldmoneyresult{\@ii\textit{s}}%
+      \ifnum\@iii>0
+        \expandafter\def\expandafter\@oldmoneyresult\expandafter
+          {\@oldmoneyresult.\,\@iii\textit{d}}%
+      \fi
+    \else
+      \ifnum\@iii>0
+        \def\@oldmoneyresult{\@iii\textit{d}}%
       \fi
     \fi
   \fi
+  \@oldmoneyresult\@oldmoneyperiod
 }
 
 \newcommand{\headlesschapter}[1]{%just in case we need to suppress the chapter head
@@ -361,6 +437,8 @@ ItalicFont = *-Italic.otf
   \endgroup
 }
 
-
-
-\makeatother
+\newcommand{\chapterargument}[1]{
+\begin{quote}
+#1
+\end{quote}
+}
