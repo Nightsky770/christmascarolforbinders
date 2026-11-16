@@ -1,3 +1,3 @@
-"Folio" means two book pages per side of a sheet of printer paper, or four book pages total per sheet. You will print out the PDFs in the "folio" folder on grain short paper, double-sided, flip on short side. Your final text block will be 5.5" x 8.5".
+"Folio" means two book pages per side of a sheet of 8.5" x 11" printer paper, or four book pages total per sheet. You will print out the PDFs in the "folio" folder on grain short paper, double-sided, flip on short side. Your final text block will be 5.5" x 8.5".
 
-"Quarto" means four book pages per side of a sheet of printer paper, or eight book pages total per sheet. You will print out the PDFs in the "quarto" folder on grain long paper, double-sided, flip on short side. Then you'll cut each A4 sheet in half crosswise. Your final text block will be 4.25" x 5.5".
+"Quarto" means four book pages per side of a sheet of 8.5" x 11" printer paper, or eight book pages total per sheet. You will print out the PDFs in the "quarto" folder on grain long paper, double-sided, flip on short side. Then you'll cut each sheet in half crosswise. Your final text block will be 4.25" x 5.5".
