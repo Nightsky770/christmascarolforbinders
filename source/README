@@ -1,5 +1,18 @@
 .sty files go in whatever directory you're running LaTeX in, or in a central folder LaTeX knows about.
 
+**New!** I've changed bindery.sty so that it better handles different page sizes. It now decides whether page size is in the A series (common outside the United States) or US letter paper (common in the United States) by page height/width ratios rather than what class option is present, so it should handle wacky page sizes like A7 or whatever just fine.
+
+I've replaced the old environment system (two environments, letter and a4) with a new eight-environment system. 
+* LaTeX code in the *folio* environment will be included for both letter folio and A4 folio output.
+* LaTeX code in the *quarto* environment will be included for both letter quarto and A4 quarto output.
+* LaTeX code in the *iso* environment will be included for both A4 folio and A4 quarto output.
+* LaTeX code in the *usletter* environment will be included for both letter folio and letter quarto output.
+* LaTeX code in the *letterfolio* environment will be included for letter folio output only.
+* LaTeX code in the *a4folio* environment will be included for A4 folio output only.
+* LaTeX code in the *letterquarto* environment will be included for letter quarto output only.
+* LaTeX code in the *a4quarto* environment will be included for A4 quarto output only.
+
+
 I've placed a cleaned up scan of Rackham's drawing for the endpapers in images (images/endpaper.jpg), in case it's useful to someone.
 
 Fonts used are:
