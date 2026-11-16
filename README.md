@@ -10,8 +10,13 @@ All content (text and images) is in the public domain in the United States. Font
 
 CW: Ableism, child death (he gets better).
 
-If you are using US letter paper (8.5" x 11"), download the "letter" folder containing the signatures and print them out, double-sided, flip on short side.
+**New!** Quarto size now available!
+For those who like things small, I've now made this work available in quarto format:
+* US letter paper users will print out PDFs that each have four pages per side of a sheet of paper (grain long, double-sided, flip on short side), cut each sheet in half, and sew signatures into a 4.25" x 5.5" text block.
+* A4 paper users will print out PDFs that each have four pages per side of a sheet of paper (grain long, double-sided, flip on short side), cut each sheet in half, and sew signatures into an A6 text block.
 
-If you are using A4, download the "a4" folder containing the signatures and print them out, double-sided, flip on short side.
+Folio size continues to be available:
+* US letter paper (8.5" x 11") users will print out PDFs that each have two pages per side of a sheet of paper (grain short, double-sided, flip on short side) and sew signatures into a 5.5" x 8.5" text block.
+* A4 paper users will print out PDFs that each have two pages per side of a sheet of paper (grain short, double-sided, flip on short side) and sew signatures into an A5 text block.
 
 Source files (top-level and per-chapter files) are in the source directory for each book. You do not need them unless you are preparing your own version. I am using LuaLaTeX.
