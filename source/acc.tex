@@ -1,6 +1,10 @@
+% !TEX root = ~home/nicole/Documents/git/xmascarol/acc.tex
+
 \documentclass[
-a5paper,
-%paper=5.5in:8.5in,
+  % paper=a6,
+  % paper=4.25in:5.5in,
+  % paper=a5,
+  paper=5.5in:8.5in,
 ]{scrbook} % Document font size and paper size
 
 \title{A Christmas Carol}
@@ -9,28 +13,23 @@ a5paper,
 \usepackage{illustrations}
 
 \usepackage{enumitem}
-\setlist[itemize]{noitemsep} 
+\setlist[itemize]{noitemsep}
 
 \setfontfamily\chapterfont{Menuetto.ttf}
-\setdropcaps{acorninitials.ttf}
+\setdropcaps{Acorn___.ttf}
 
+\DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill,
+  dynnumwidth=true]{chapter}{chapter}
 
-\DeclareTOCStyleEntry[beforeskip=.1cm,linefill=\TOCLineLeaderFill, dynnumwidth=true]{chapter}{chapter}
+\DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-10pt,
+entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
 
-\DeclareTOCStyleEntry[beforeskip=.1cm,numwidth=-10pt,entrynumberformat=\hideentrynumber,linefill=\TOCLineLeaderFill]{tocline}{figure}
-
-\hyphenation{Crat-chit  Eb-en-ez-er}
+\hyphenation{Crat-chit Crat-chits Eb-en-ez-er Scrooge shil-ling shil-lings}
 
 \begin{document}
 
-\newcommand{\moderatelyhuge}{\fontsize{40}{50}\selectfont}
-
-
-
 \frontmatter
 \renewcommand*{\sectionmarkformat}{}
-
-
 
 \KOMAoptions{headings=openright}
 \includepdf[width=\basicwidth]{titlepage.jpg}
@@ -43,38 +42,42 @@ a5paper,
 \pagestyle{plain}
 
 \tableofcontents
-\vfill
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.7\textwidth]{elfturkey}
-\caption[Tailpiece to Table of Contents]{}
-\end{figure}
-%\clearpage
+\begin{folio}
+  \vfill
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=.6\textwidth]{twoguys}
+    \caption[Tailpiece to Table of Contents]{}
+  \end{figure}
+\end{folio}
 
-\KOMAoptions{headings=openleft}
-\renewcommand{\listfigurename}{List of Illustrations}
-\listoffigures
-\vfill
-\begin{figure}[h]
-\centering
-\includegraphics[width=.9\textwidth]{doubleelf}
-\caption[Tailpiece to List of Illustrations]{}
-\end{figure}
-\clearpage
+
+  \KOMAoptions{headings=openleft}
+  \renewcommand{\listfigurename}{List of Illustrations}
+  \listoffigures
+  \begin{folio}
+    \vfill
+    \begin{figure}[h]
+    \centering
+      \includegraphics[width=\textwidth]{doubleelf}
+      \caption[Tailpiece to List of Illustrations]{}
+    \end{figure}
+  \end{folio}
+
+  \clearpage
+
+
 
 \include{chapters/characters.tex}
 
 \pagestyle{headings}
 
-
 %Some specific customizations for Christmas Carol
-
 %store the defaults; we'll need them later
 \makeatletter
 \let\saved@chapterfont\scr@fnt@chapter
 \let\saved@chapterprefixfont\scr@fnt@chapterprefix
 \makeatother
-
 
 % Make sure chapter prefix is shown
 \KOMAoption{chapterprefix}{true}
@@ -82,37 +85,44 @@ a5paper,
 % Customize the chapter prefix format
 \renewcommand*{\chapterformat}{\chaptername~\thechapter}
 
-
 % Update the chapter mark format to use "Stave" 
 \renewcommand{\chaptername}{Stave}
 \renewcommand{\thechapter}{\spelled{chapter}}
 
-%embiggen chapter name (`Stave One') relative to chapter title (`Marley's Ghost')
-\setkomafont{chapterprefix}{\chapterfont\moderatelyhuge}
+
+\ifquarto
+  {\RedeclareSectionCommand[beforeskip=0pt,innerskip=0pt,afterskip=0pt]{chapter}
+  \captionsetup[figure]{font={sc,scriptsize},labelformat=empty}
+  \renewcommand{\basicscale}{1.0} 
+  }
+  {\addtokomafont{chapterprefix}{\fontsize{40}{50}\chapterfont}}
+
+
+\newcommand{\setcaption}{}
 
 %mark header with roman numeral version of chapter number
 \renewcommand{\chaptermark}[1]{%
   \markboth{\chaptername\ \Roman{chapter}:\ #1}{}%
 }
 
- %Tell ToC to list a chapter by its Roman numeral name, not the spelled-out version
+%Tell ToC to list a chapter by its Roman numeral name, not the spelled-out version
 \renewcommand*{\addchaptertocentry}[2]{%
   \addtocentrydefault{chapter}{}{\chaptername\ \Roman{chapter}: #2}%
 }
 
-
 %end of Christmas Carol customizations
 
 \renewcommand*{\chaptermarkformat}{}
-\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}
+
+\ifquarto
+{\renewcommand*{\chapterheadendvskip}{\vspace{10pt}}}
+{\renewcommand*{\chapterheadendvskip}{\vspace{20pt}}}
+
 \renewcommand*{\chapterheadstartvskip}{\vspace{0pt}}
-
-
 
 \mainmatter
 \flushbottom
 \KOMAoptions{headings=openright}
-
 
 \include{chapters/1.tex}
 \include{chapters/2.tex}
@@ -120,20 +130,26 @@ a5paper,
 \include{chapters/4.tex}
 \include{chapters/5.tex}
 
-
 %reset defaults
 \makeatletter
 \let\scr@fnt@chapter\saved@chapterfont
 \let\scr@fnt@chapterprefix\saved@chapterprefixfont
 \makeatother
 
-\cleardoublepage
+\cleardoubleevenpage
 \KOMAoptions{headings=openleft}
+
 \chapter*{Colophon}
+
 \vfill
 \centering
 \begin{minipage}{\textwidth}
-\textit{A Christmas Carol} was first published in 1843 by Chapman \& Hall in London (UK). Illustrations by Arthur Rackham (1867--1939) are taken from a version published in 1915 by J.~B. Lippincott Company in Philadelphia (USA). Grateful acknowledgment is made to the Internet Archive, which in 2008 digitised a copy of this edition belonging to the New York Public Library. Additional illustrations are from Rackham's illustrated version of Clement C. Moore's \textit{The Night Before Christmas}, published in 1915 by J.~B. Lippincott Company in Philadelphia.
+  \workname{A Christmas Carol,} the seventh novel by Charles Dickens (1812--1870), was first published in 1843 by Chapman \& Hall in
+  London (UK). Illustrations by Arthur Rackham (1867--1939) are from a version
+  published in 1915 by J.~B.\ Lippincott Company in Philadelphia (USA).
+  \begin{folio}
+    Grateful acknowledgment is made to the Internet Archive, which in 2008 digitised a copy of this edition belonging to the New York Public Library.
+  \end{folio}
 \end{minipage}
 \vfill
 gutenberg.org/ebooks/24022
@@ -141,22 +157,18 @@ gutenberg.org/ebooks/24022
 \includegraphics[width=.5\textwidth]{bells}
 \vfill
 \begin{minipage}{\textwidth}
-Text is set in <EB Garamond>, Georg Mayr-Duffner's free and open source implementation of Claude Garamond’s famous humanist typefaces from the mid-sixteenth century. Chapter dropcaps are set in Dieter Steffmann's <Acorn Initialen>; chapter headings are set in Dieter Steffman's <Menuetto>.
+  Text is set in Georg Mayr-Duffner's <EB Garamond.> Chapter dropcaps are set in
+  Dieter Steffmann's <Acorn Initialen;> chapter headings are set in Dieter
+  Steffman's <Menuetto.>
 \end{minipage}
 \vfill
-github.com/georgd/EB-Garamond
-\\steffmann.1001fonts.com
-%\vfill
-%\includegraphics[width=.5\textwidth]{bells}
-%\vfill
-%\begin{minipage}{\textwidth}
-%This typeset is dedicated to the public domain under a Creative Commons CC0 1.0 Universal deed.
-%\end{minipage}
+github.com/georgd/EB-Garamond \\
+steffmann.de
 %\vfill
 %creativecommons.org/publicdomain/zero/1.0/
 \vfill
 \includegraphics[width=.5\textwidth]{bells}
 \vfill
-Typeset in \LaTeX{}. Last revised \today.
+Typeset in \LaTeX{}.\\Last revised \today.
 \thispagestyle{empty}
 \end{document}

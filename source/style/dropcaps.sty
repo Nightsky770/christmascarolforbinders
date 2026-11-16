@@ -1,7 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{dropcaps}
 
-
 \RequirePackage{lettrine}
 \RequirePackage{xparse}
 \RequirePackage{stackengine} %for accent support
@@ -24,12 +23,8 @@
 % \LettrineRealHeightfalse
 % (Default values given. Just change them to whatever you need.)
 
-
 \NewDocumentCommand{\setdropcaps}{m}
-{
-	\renewcommand{\LettrineFontHook}{\fontspec{#1}}
-}
-
+{ \renewcommand{\LettrineFontHook}{\fontspec{#1}} }
 
 %%%%%%%%%%%%%%%% Accented character support %%%%%%%%%%%%%%%%%%
 % Supports acute accent, grave accent, circumflex accent.
@@ -47,7 +42,6 @@
 % \newunicodechar{̀}{{\normalfont ̀}}
 %%%%%%%%%%%%%%%%% end of accented character support %%%%%%%%%%%%%%%%%%%%
 
-
 %%%%%%%%%%%% This is dark magic that I found on the internet and do not 100% understand, and therefore can't improve upon. If you are using dropcaps and the first paragraph of your chapter is very short and doesn't fill up the text space to the right of the dropcap, lettrine will indent the next paragraph relative to the regular left text margin--usually overlapping the dropcap and rendering it illegible. To correct this, precede each short paragraph with a \zz:
 %\lettrine{I}{} considered it.
 %
@@ -64,20 +58,18 @@
 \makeatletter
 \newcount\zzc
 
-
 \def\zz{%
-\ifnum\prevgraf<\c@L@lines
-\zzc\z@
-\loop
-\ifnum\zzc<\prevgraf
-\advance\zzc\@ne
-\afterassignment\zzda\count@\L@parshape\relax
-\repeat
-\parshape\L@parshape
-\fi}
+  \ifnum\prevgraf<\c@L@lines
+  \zzc\z@
+  \loop
+  \ifnum\zzc<\prevgraf
+  \advance\zzc\@ne
+  \afterassignment\zzda\count@\L@parshape\relax
+  \repeat
+  \parshape\L@parshape
+  \fi
+}
 \def\zzda{\afterassignment\zzdb\dimen@}
 \def\zzdb{\afterassignment\zzdef\dimen@}
 \def\zzdef#1\relax{\edef\L@parshape{\the\numexpr\count@-1\relax\space #1}}
 \makeatother
-
-

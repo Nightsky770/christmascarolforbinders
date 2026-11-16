@@ -3,7 +3,7 @@
 
 \RequirePackage{floatpag}
 \RequirePackage{caption}
-\RequirePackage{rotating}
+\RequirePackage[twoside]{rotating}
 \RequirePackage{xcolor}
 \RequirePackage{graphicx}
 \RequirePackage{wrapfig}
@@ -20,7 +20,7 @@
 \captionsetup[figure]{font=sc,labelformat=empty}
 \graphicspath{ {./images/} }
 
-\renewcommand{\listfigurename}{List of Illustrations} 
+\renewcommand{\listfigurename}{List of Illustrations}
 %can override this later, but this is usually what we want
 
 \makeatletter
@@ -29,8 +29,8 @@
   \cleardoublepage
   \chapter*{\listfigurename}%
   \@mkboth{\listfigurename}{\listfigurename}%
-%  \addcontentsline{toc}{chapter}{\protect\numberline{}{\listfigurename}}%
-\addcontentsline{toc}{chapter}{\listfigurename}%
+  %  \addcontentsline{toc}{chapter}{\protect\numberline{}{\listfigurename}}%
+  \addcontentsline{toc}{chapter}{\listfigurename}%
   \pagestyle{plain}%
   \@starttoc{lof}%
   \thispagestyle{plain}%
@@ -38,10 +38,11 @@
 
 \newcommand{\imagetoc}[2]{%  % #1: image file, #2: scale factor
   \ifx\relax\detokenize{#2}\relax
-    \PackageWarning{illustrations}{Scale factor missing in \protect\imagetoc{#1}. Using default 0.8}%
-    \renewcommand{\contentsname}{\includegraphics[width=0.8\linewidth]{#1}}%
+  \PackageWarning{illustrations}{Scale factor missing in \protect\imagetoc{#1}.
+    Using default 0.8}%
+  \renewcommand{\contentsname}{\includegraphics[width=0.8\linewidth]{#1}}%
   \else
-    \renewcommand{\contentsname}{\includegraphics[width=#2\linewidth]{#1}}%
+  \renewcommand{\contentsname}{\includegraphics[width=#2\linewidth]{#1}}%
   \fi
 }
 
@@ -50,8 +51,8 @@
   \addcontentsline{toc}{chapter}{#2}
   \renewcommand{\listoffigures}{%
     \begingroup
-      \listoffigures@heading
-      \@starttoc{lof}%
+    \listoffigures@heading
+    \@starttoc{lof}%
     \endgroup
   }
 }
@@ -67,13 +68,9 @@
 \makeatother
 
 \DeclareTOCStyleEntry[
-  linefill=\TOCLineLeaderFill,
-  indent=1em,
-  beforeskip=0.5em,
+  linefill=\TOCLineLeaderFill, indent=1em, beforeskip=0.5em,
   entrynumberformat=\hideentrynumber
 ]{tocline}{figure}
-
-
 
 % #1: scale of picture relative to \textwidth. Default is 1.0
 % #2: image file name
@@ -83,62 +80,60 @@
 \NewDocumentEnvironment{colorbigpic}{O{1.0} m o o o}
 {%
   \begin{figure}[p]
-    \vfill
-%    \vspace*{-0.5cm}
-    \makebox[\textwidth][c]{%
-      \begin{minipage}{#1\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{#2}
-        \IfValueT{#3}{%
-          \par\vspace{1em}%
-          \begin{minipage}{0.9\linewidth}%
-            \centering
-            \IfValueTF{#4}{%
-              \caption[\textbf{#4}]{#3}%
-            }{%
-              \caption[\textbf{#3}]{#3}%
-            }%
-            \IfValueT{#5}{%
-              \label{#5}%
-            }%
-          \end{minipage}
-        }
-      \end{minipage}%
+  \vfill
+  %    \vspace*{-0.5cm}
+  \makebox[\textwidth][c]{%
+    \begin{minipage}{#1\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{#2}
+    \IfValueT{#3}{%
+      \par\vspace{1em}%
+      \begin{minipage}{0.9\linewidth}%
+      \centering
+      \IfValueTF{#4}{%
+        \caption[\textbf{#4}]{#3}%
+      }{%
+        \caption[\textbf{#3}]{#3}%
+      }%
+      \IfValueT{#5}{%
+        \label{#5}%
+      }%
+      \end{minipage}
     }
-    \vfill
+    \end{minipage}%
+  }
+  \vfill
   \end{figure}
 }
 {}
-
-
 
 % Environment for black and white big pictures with normal captions
 \NewDocumentEnvironment{bwbigpic}{O{1.0} m o o o}
 {%
   \begin{figure}[p]
-    \vfill
-%    \vspace*{-0.5cm} 
-    \makebox[\textwidth][c]{%
-      \begin{minipage}{#1\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{#2}
-        \IfValueT{#3}{%  
-          \par\vspace{1em}%
-          \begin{minipage}{0.9\linewidth}%
-            \centering
-            \IfValueTF{#4}{%
-              \caption[#4]{#3}%
-            }{%
-              \caption{#3}%
-            }%
-            \IfValueT{#5}{%
-              \label{#5}%
-            }%
-          \end{minipage}
-        }
-      \end{minipage}%
+  \vfill
+  %    \vspace*{-0.5cm} 
+  \makebox[\textwidth][c]{%
+    \begin{minipage}{#1\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{#2}
+    \IfValueT{#3}{%  
+      \par\vspace{1em}%
+      \begin{minipage}{0.9\linewidth}%
+      \centering
+      \IfValueTF{#4}{%
+        \caption[#4]{#3}%
+      }{%
+        \caption{#3}%
+      }%
+      \IfValueT{#5}{%
+        \label{#5}%
+      }%
+      \end{minipage}
     }
-    \vfill
+    \end{minipage}%
+  }
+  \vfill
   \end{figure}
 }
 {}
@@ -147,10 +142,8 @@
 % \imagetoc{contents} %Assumes there will be a file called "contents.jpg", "contents.png", etc. in a directory where LaTeX knows to look for images
 % \tableofcontents
 
-
 % \imagelof{illustrations}{List of Illustrations} %As above, assumes there will be a file called "illustrations.jpg" or something
 % \listoffigures
-
 
 %%%%%%%%%%%%%%%%% Frame pages %%%%%%%%%%%%%%
 
@@ -158,17 +151,18 @@
   \pagestyle{empty}%
   \begin{adjustwidth}{1.5cm}{1.5cm}%
   \let\clearpage\relax
-  \begin{tikzpicture}[remember picture, overlay]  
+  \begin{tikzpicture}[remember picture, overlay]
 
-\node (pic) at ($(current page.center)$) {\includegraphics[width=1.2\textwidth]{#1}};
+  \node (pic) at ($(current page.center)$)
+  {\includegraphics[width=1.2\textwidth]{#1}};
 
-\end{tikzpicture}
-% \vspace*{3cm}
+  \end{tikzpicture}
+  % \vspace*{3cm}
   % \end{adjustwidth}%
   % \clearpage%
-\begin{minipage}{0.5\textwidth}[c]
-	\centering
+  \begin{minipage}{0.5\textwidth}[c]
+  \centering
 }
-  {%
-\end{minipage}
+{%
+  \end{minipage}
 }
